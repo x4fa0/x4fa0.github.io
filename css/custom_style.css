@@ -1,0 +1,10 @@
+// ==================================================
+// Headers.
+// ==================================================
+.post-body h1,.post-body h2 {
+    border-bottom: 1px solid #eee
+}
+
+.post-body h3,.post-body h4 {
+    border-bottom: 0px dotted #eee
+}

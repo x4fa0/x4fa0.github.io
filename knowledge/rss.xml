@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Knowledges on 生活与梦想</title><link>https://blog.jiefar.com/knowledge/</link><description>Recent content in Knowledges on 生活与梦想</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Thu, 25 Jul 2024 09:45:30 +0800</lastBuildDate><atom:link href="https://blog.jiefar.com/knowledge/rss.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 静态博客部署</title><link>https://blog.jiefar.com/knowledge/hugo-static-blog-deployment/</link><pubDate>Fri, 21 Jun 2024 17:17:32 +0800</pubDate><guid>https://blog.jiefar.com/knowledge/hugo-static-blog-deployment/</guid><description>&lt;h2 id="i-前提条件">I. 前提条件
+&lt;a class="header-anchor" href="#i-%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">&lt;/a>
+&lt;/h2>&lt;h3 id="11-安装-hugo">1.1 安装 Hugo
+&lt;a class="header-anchor" href="#11-%e5%ae%89%e8%a3%85-hugo">&lt;/a>
+&lt;/h3>&lt;h4 id="111-windows">1.1.1 Windows
+&lt;a class="header-anchor" href="#111-windows">&lt;/a>
+&lt;/h4>&lt;p>1.Hugo 下载（建议下载扩展版）：
+&lt;a href="https://github.com/gohugoio/hugo" title="Hugo(github.com)" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+ Hugo(github.com)
+ 
+ &lt;i class="fa fa-external-link-alt">&lt;/i>
+ 
+&lt;/a>&lt;/p>
+&lt;p>2.解压下载的压缩包，将 &lt;code>hugo.exe&lt;/code> 复制到 &lt;code>%SystemRoot%\System32&lt;/code> 目录。&lt;/p></description></item><item><title>Obsidian 多平台同步</title><link>https://blog.jiefar.com/knowledge/obsidian-multi-platform-synchronization/</link><pubDate>Tue, 18 Jun 2024 09:30:32 +0800</pubDate><guid>https://blog.jiefar.com/knowledge/obsidian-multi-platform-synchronization/</guid><description>&lt;h2 id="i-obsidian-安装">I. Obsidian 安装
+&lt;a class="header-anchor" href="#i-obsidian-%e5%ae%89%e8%a3%85">&lt;/a>
+&lt;/h2>&lt;h3 id="11-下载安装">1.1 下载安装
+&lt;a class="header-anchor" href="#11-%e4%b8%8b%e8%bd%bd%e5%ae%89%e8%a3%85">&lt;/a>
+&lt;/h3>&lt;p>Official Website: 
+&lt;a href="https://obsidian.md/" title="Obsidian" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+ Obsidian
+ 
+ &lt;i class="fa fa-external-link-alt">&lt;/i>
+ 
+&lt;/a>&lt;/p>
+&lt;h3 id="12-创建仓库">1.2 创建仓库
+&lt;a class="header-anchor" href="#12-%e5%88%9b%e5%bb%ba%e4%bb%93%e5%ba%93">&lt;/a>
+&lt;/h3>&lt;p>📢注意：该操作会在指定“仓库位置”下创建一个以“仓库名称”为命名的本地目录。&lt;/p></description></item></channel></rss>

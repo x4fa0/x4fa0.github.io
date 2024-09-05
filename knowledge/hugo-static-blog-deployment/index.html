@@ -1,0 +1,570 @@
+<!doctype html><html lang=zh-CN data-theme=light><head><meta charset=UTF-8><meta name=viewport content="width=device-width"><meta name=theme-color content="#222" media="(prefers-color-scheme: light)"><meta name=generator content="Hugo 0.134.0"><link rel="shortcut icon" type=image/x-icon href=/imgs/icons/favicon.ico><link rel=icon type=image/x-icon href=/imgs/icons/favicon.ico><link rel=icon type=image/png sizes=16x16 href=/imgs/icons/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=/imgs/icons/favicon-32x32.png><link rel=apple-touch-icon sizes=180x180 href=/imgs/icons/apple-touch-icon.png><meta itemprop=name content="Hugo 静态博客部署"><meta itemprop=description content="一个凡人的生活与梦想"><meta name=description content="一个凡人的生活与梦想"><meta itemprop=datePublished zgotmplz><meta itemprop=dateModified zgotmplz><meta itemprop=image content="https://blog.jiefar.com/imgs/blog-avatar.png"><meta itemprop=keywords content="hugo"><meta property="og:type" content="article"><meta property="og:title" content="Hugo 静态博客部署"><meta property="og:description" content="一个凡人的生活与梦想"><meta property="og:image" content="/imgs/blog-avatar.png"><meta property="og:image:width" content="312"><meta property="og:image:height" content="312"><meta property="og:image:type" content="image/jpeg/png/svg/jpg"><meta property="og:url" content="https://blog.jiefar.com/knowledge/hugo-static-blog-deployment/"><meta property="og:site_name" content="生活与梦想"><meta property="og:locale" content="zh-CN"><meta property="article:author" content="Mortal"><meta property="article:published_time" content="2024-06-21 17:17:32 +0800 +0800"><meta property="article:modified_time" content="2024-07-25 09:45:30 +0800 +0800"><link type=text/css rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css><link type=text/css rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css><link type=text/css rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css><link rel=stylesheet href=/css/main.min.5ec88d92404db5c45a4c334b64580516d3eb21640ff9cf0d90bd454581b68326.css><link rel=stylesheet type=text/css href=/css/custom_style.css><script type=text/javascript>(function(){localDB={set:function(e,t,n){if(n===0)return;const s=new Date,o=n*864e5,i={value:t,expiry:s.getTime()+o};localStorage.setItem(e,JSON.stringify(i))},get:function(e){const t=localStorage.getItem(e);if(!t)return void 0;const n=JSON.parse(t),s=new Date;return s.getTime()>n.expiry?(localStorage.removeItem(e),void 0):n.value}},theme={active:function(){const e=localDB.get("theme");if(e==null)return;theme.toggle(e),window.matchMedia("(prefers-color-scheme: dark)").addListener(function(e){theme.toggle(e.matches?"dark":"light")})},toggle:function(e){document.documentElement.setAttribute("data-theme",e),localDB.set("theme",e,2);const t=document.querySelector("iframe.giscus-frame");if(t){const n={setConfig:{theme:e}};t.contentWindow.postMessage({giscus:n},"https://giscus.app")}}},theme.active()})(window)</script><script class=next-config data-name=page type=application/json>{"comments":true,"isHome":false,"isPage":true,"path":"hugo-static-blog-deployment","permalink":"https://blog.jiefar.com/knowledge/hugo-static-blog-deployment/","title":"Hugo 静态博客部署","waline":{"js":[{"alias":"@waline/client","alias_name":"waline","file":"dist/pageview.js","name":"pageview","version":"2.15.8"},{"alias":"@waline/client","alias_name":"waline","file":"dist/comment.js","name":"comment","version":"2.15.8"}]}}</script><script type=text/javascript>document.addEventListener("DOMContentLoaded",()=>{var e=document.createElement("script");e.charset="UTF-8",e.id="LA_COLLECT",e.src="https://sdk.51.la/js-sdk-pro.min.js",e.async="true",e.onload=function(){LA.init({id:"3J63OSfCg9mfPx0q",ck:"3J63OSfCg9mfPx0q",autoTrack:!0})},document.head.appendChild(e)})</script><title>Hugo 静态博客部署 - 生活与梦想</title><noscript><link rel=stylesheet href=/css/noscript.css></noscript></head><body itemscope itemtype=http://schema.org/WebPage class=use-motion><div class=headband></div><main class=main><header class=header itemscope itemtype=http://schema.org/WPHeader><div class=header-inner><div class=site-brand-container><div class=site-nav-toggle><div class=toggle aria-label role=button><span class=toggle-line></span>
+<span class=toggle-line></span>
+<span class=toggle-line></span></div></div><div class=site-meta><a href=/ class=brand rel=start><i class=logo-line></i><h1 class=site-title>生活与梦想</h1><i class=logo-line></i></a><p class=site-subtitle itemprop=description>做人如果没有梦想, 跟咸鱼有什么分别</p></div><div class=site-nav-right><div class="toggle popup-trigger"><i class="fa fa-search fa-fw fa-lg"></i></div></div></div><nav class=site-nav><ul class="main-menu menu"><li class="menu-item menu-item-home"><a href=/ class=hvr-icon-pulse rel=section><i class="fa fa-home hvr-icon"></i>首页</a></li><li class="menu-item menu-item-about"><a href=/about.html class=hvr-icon-pulse rel=section><i class="fa fa-user hvr-icon"></i>关于</a></li><li class="menu-item menu-item-knowledge"><a href=/knowledge/ class=hvr-icon-pulse rel=section><i class="fa fa-book hvr-icon"></i>知识</a></li><li class="menu-item menu-item-lives"><a href=/ class=hvr-icon-pulse rel=section><i class="fa fa-sun hvr-icon"></i>生活</a></li><li class="menu-item menu-item-commonweal"><a href=/404.html class=hvr-icon-pulse rel=section><i class="fa fa-heartbeat hvr-icon"></i>公益</a></li><li class="menu-item menu-item-search"><a role=button class="popup-trigger hvr-icon-pulse"><i class="fa fa-search fa-fw hvr-icon"></i>搜索</a></li></ul></nav><div class=search-pop-overlay><div class="popup search-popup"><div class=search-header><span class=search-icon><i class="fa fa-search"></i></span><div class=search-input-container><input autocomplete=off autocapitalize=off maxlength=80 placeholder=搜索... spellcheck=false type=search class=search-input></div><span class=popup-btn-close role=button><i class="fa fa-times-circle"></i></span></div><div class="search-result-container no-result"><div class=search-result-icon><i class="fa fa-spinner fa-pulse fa-5x"></i></div></div></div></div></div><div class="toggle sidebar-toggle" role=button><span class=toggle-line></span>
+<span class=toggle-line></span>
+<span class=toggle-line></span></div><aside class=sidebar><div class="sidebar-inner sidebar-nav-active sidebar-toc-active"><ul class=sidebar-nav><li class=sidebar-nav-toc>文章目录</li><li class=sidebar-nav-overview>站点概览</li></ul><div class=sidebar-panel-container><div class="post-toc-wrap sidebar-panel"><div class="post-toc animated"><nav id=TableOfContents><ul><li><a href=#i-前提条件>I. 前提条件</a><ul><li><a href=#11-安装-hugo>1.1 安装 Hugo</a><ul><li><a href=#111-windows>1.1.1 Windows</a></li><li><a href=#112-macos>1.1.2 MacOS</a></li><li><a href=#113-linux>1.1.3 Linux</a></li></ul></li><li><a href=#12-安装-git>1.2 安装 Git</a></li></ul></li><li><a href=#ii-创建站点>II. 创建站点</a><ul><li><a href=#21-安装确认>2.1 安装确认</a></li><li><a href=#22-创建站点>2.2 创建站点</a></li><li><a href=#23-创建源码仓库>2.3 创建源码仓库</a></li><li><a href=#24-关联源码仓库>2.4 关联源码仓库</a></li><li><a href=#25-主题配置>2.5 主题配置</a><ul><li><a href=#251-主题下载>2.5.1 主题下载</a></li><li><a href=#252-主题配置>2.5.2 主题配置</a></li></ul></li></ul></li><li><a href=#iii-创建文章>III. 创建文章</a><ul><li><a href=#31-配置文章模板>3.1 配置文章模板</a></li><li><a href=#32-发布文章>3.2 发布文章</a><ul><li><a href=#321-创建文章>3.2.1 创建文章</a></li><li><a href=#322-增加前置格式>3.2.2 增加前置格式</a></li></ul></li><li><a href=#33-生成网页>3.3 生成网页</a></li><li><a href=#34-发布内容>3.4 发布内容</a></li></ul></li><li><a href=#iv-自动部署>IV. 自动部署</a><ul><li><a href=#41-github-page-部署>4.1 GitHub Page 部署</a><ul><li><a href=#411-创建-github-pages>4.1.1 创建 GitHub Pages</a></li><li><a href=#412-生成-api-令牌>4.1.2 生成 API 令牌</a></li><li><a href=#413-配置环境变量>4.1.3 配置环境变量</a></li><li><a href=#414-创建工作流>4.1.4 创建工作流</a></li><li><a href=#415-推送更新>4.1.5 推送更新</a></li></ul></li><li><a href=#42-cloudflare-pages-部署>4.2 Cloudflare Pages 部署</a><ul><li><a href=#421-创建-cloudflare-pages>4.2.1 创建 Cloudflare Pages</a></li><li><a href=#422-生成-api-令牌>4.2.2 生成 API 令牌</a></li><li><a href=#423-获取账户-id>4.2.3 获取账户 ID</a></li><li><a href=#424-配置环境变量>4.2.4 配置环境变量</a></li><li><a href=#425-创建工作流>4.2.5 创建工作流</a></li><li><a href=#426-推送更新>4.2.6 推送更新</a></li></ul></li><li><a href=#43-服务器部署>4.3 服务器部署</a><ul><li><a href=#431-服务器准备>4.3.1 服务器准备</a></li><li><a href=#432-nginx-部署>4.3.2 Nginx 部署</a></li><li><a href=#433-配置环境变量>4.3.3 配置环境变量</a></li><li><a href=#434-创建工作流>4.3.4 创建工作流</a></li><li><a href=#435-推送更新>4.3.5 推送更新</a></li></ul></li></ul></li><li><a href=#v-博客维护>V. 博客维护</a><ul><li><a href=#51-开启评论组件可选>5.1 开启评论组件(可选)</a><ul><li><a href=#511-waline>5.1.1 Waline</a></li><li><a href=#512-giscus>5.1.2 Giscus</a></li></ul></li><li><a href=#52-升级主题>5.2 升级主题</a></li><li><a href=#53-hugo-常用命令>5.3 Hugo 常用命令</a><ul><li><a href=#531-清除缓存>5.3.1 清除缓存</a></li><li><a href=#532-调试日志>5.3.2 调试日志</a></li></ul></li><li><a href=#54--常见问题>5.4 常见问题</a><ul><li><a href=#541-新手问题>5.4.1 新手问题</a></li><li><a href=#542-重定向次数过多>5.4.2 重定向次数过多</a></li></ul></li></ul></li><li><a href=#vi-参考文档>VI. 参考文档</a></li></ul></nav></div></div><div class="site-overview-wrap sidebar-panel"><div class="site-author site-overview-item animated" itemprop=author itemscope itemtype=http://schema.org/Person><img class=site-author-image itemprop=image alt=Mortal src=/imgs/img-lazy-loading.gif data-src=/imgs/blog-avatar.png><p class=site-author-name itemprop=name>Mortal</p><div class=site-description itemprop=description>一个凡人的生活与梦想</div></div><div class="site-state-wrap site-overview-item animated"><nav class=site-state><div class="site-state-item site-state-posts"><a href=/archives/><span class=site-state-item-count>2</span>
+<span class=site-state-item-name>文章</span></a></div><div class="site-state-item site-state-categories"><a href=/categories/><span class=site-state-item-count>2</span>
+<span class=site-state-item-name>分类</span></a></div><div class="site-state-item site-state-tags"><a href=/tags/><span class=site-state-item-count>2</span>
+<span class=site-state-item-name>标签</span></a></div></nav></div><div class="links-of-social site-overview-item animated"></div><div class="cc-license animated" itemprop=license><a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh class=cc-opacity rel=noopener target=_blank title=共享知识><img src=/imgs/img-lazy-loading.gif data-src=/imgs/cc/big/by_nc_sa.svg alt=共享知识></a></div></div></div></div><div id=siteinfo-card-widget class=sidebar-card-widget><div class=item-headline><i class="fas fa-chart-line"></i>
+<span>网站资讯</span></div><div class=siteinfo><div class=siteinfo-item><div class=item-name><i class="fa-solid fa-calendar-check"></i>已运行：</div><div class=item-count id=runTimes data-publishdate=2024-06-18T09:30:32+08:00></div></div><div id=la-siteinfo-widget style=display:none></div><div class=siteinfo-item><div class=item-name><i class="fa fa-user-plus"></i>今日访问：</div><div class=item-count id=today_site_pv><i class="fa fa-sync fa-spin"></i></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-user-clock"></i>昨日访问：</div><div class=item-count id=yesterday_site_pv><i class="fa fa-sync fa-spin"></i></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-arrows-down-to-people"></i>本月访问：</div><div class=item-count id=month_site_pv><i class="fa fa-sync fa-spin"></i></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-users"></i>总访问量：</div><div class=item-count id=total_site_pv><i class="fa fa-sync fa-spin"></i></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-font"></i>总字数：</div><div class=item-count id=wordsCount data-count=5396></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-mug-hot"></i>阅读约：</div><div class=item-count id=readTimes data-times=12></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-clock-rotate-left"></i>最后更新于：</div><div class=item-count id=last-push-date data-lastpushdate=2024-06-21T17:17:32+08:00></div></div></div></div></aside><div class=sidebar-dimmer></div></header><div class=tool-buttons><div id=goto-comments class="button goto-comments" title=直达评论><i class="fas fa-comments"></i></div><div id=toggle-theme class=button title=深浅模式切换><i class="fas fa-adjust"></i></div><div class=back-to-top role=button title=返回顶部><i class="fa fa-arrow-up"></i>
+<span>0%</span></div></div><div class=reading-progress-bar></div><a role=button class="book-mark-link book-mark-link-fixed"></a><script type=text/javascript src=//sidecar.gitter.im/dist/sidecar.v1.js async></script><script type=text/javascript>((window.gitter={}).chat={}).options={room:"hugo-next/community"}</script><noscript><div class=noscript-warning>Theme NexT works best with JavaScript enabled</div></noscript><div class="main-inner post posts-expand"><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=https://blog.jiefar.com/knowledge/hugo-static-blog-deployment/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs/blog-avatar.png"><meta itemprop=name content="Mortal"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="Mortal"><meta itemprop=description content="一个凡人的生活与梦想"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="Hugo 静态博客部署"><meta itemprop=description content="I. 前提条件
+
+1.1 安装 Hugo
+
+1.1.1 Windows
+
+1.Hugo 下载（建议下载扩展版）：
+
+    Hugo(github.com)
+    
+    
+    
+
+2.解压下载的压缩包，将  hugo.exe  复制到  %SystemRoot%\System32  目录。"></span><header class=post-header><h1 class=post-title itemprop="name headline">Hugo 静态博客部署</h1><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
+</span><span class=post-meta-item-text title=发表于>发表于：
+</span><time title="创建时间：2024-06-21 17:17:32 +0800 +0800" itemprop="dateCreated datePublished" datetime="2024-06-21 17:17:32 +0800 +0800">2024-06-21
+</time></span><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar-check"></i>
+</span><span class=post-meta-item-text title=更新于>更新于：
+</span><time title=修改时间：2024-07-25T09:45:30+08:00 itemprop=dateModified datetime=2024-07-25T09:45:30+08:00>2024-07-25</time>
+</span><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-folder-open"></i>
+</span><span class=post-meta-item-text title=分类于>分类于：
+</span><span itemprop=about itemscope itemtype=http://schema.org/Thing><a href=/categories/blog itemprop=url rel=index><span itemprop=name>blog</span></a></span></span></div><div class=post-meta-items><span class=post-meta-item title=字数><span class=post-meta-item-icon><i class="fas fa-solid fa-file-word"></i>
+</span><span class=post-meta-item-text>字数：</span>
+<span>5049</span>
+</span><span class=post-meta-item title=阅读><span class=post-meta-item-icon><i class="fas fa-solid fa-clock"></i>
+</span><span class=post-meta-item-text>阅读：&ap;</span>
+<span>11分钟</span>
+</span><span class=post-meta-item title=浏览><span class=post-meta-item-icon><i class="fas fa-solid fa-eye"></i>
+</span><span class=post-meta-item-text>浏览：
+</span><span class=waline-pageview-count data-path=/knowledge/hugo-static-blog-deployment/><i class="fa fa-sync fa-spin"></i>
+</span></span><span class=post-meta-item title><span class=post-meta-item-icon><i class="fas fa-solid fa-comments"></i>
+</span><span class=post-meta-item-text title=评论>评论：
+</span><span id=comments-count class=waline-comment-count data-path=/knowledge/hugo-static-blog-deployment/><i class="fa fa-sync fa-spin"></i></span></span></div></div></header><div class=post-body itemprop=articleBody><h2 id=i-前提条件>I. 前提条件
+<a class=header-anchor href=#i-%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6></a></h2><h3 id=11-安装-hugo>1.1 安装 Hugo
+<a class=header-anchor href=#11-%e5%ae%89%e8%a3%85-hugo></a></h3><h4 id=111-windows>1.1.1 Windows
+<a class=header-anchor href=#111-windows></a></h4><p>1.Hugo 下载（建议下载扩展版）：
+<a href=https://github.com/gohugoio/hugo title=Hugo(github.com) rel="noopener external nofollow noreferrer" target=_blank class=exturl>Hugo(github.com)
+<i class="fa fa-external-link-alt"></i></a></p><p>2.解压下载的压缩包，将 <code>hugo.exe</code> 复制到 <code>%SystemRoot%\System32</code> 目录。</p><h4 id=112-macos>1.1.2 MacOS
+<a class=header-anchor href=#112-macos></a></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>brew install hugo
+</span></span></code></pre></div><h4 id=113-linux>1.1.3 Linux
+<a class=header-anchor href=#113-linux></a></h4><p>官方文档：
+<a href=https://gohugo.io/installation/linux/#repository-packages title="Linux | Hugo (gohugo.io)" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Linux | Hugo (gohugo.io)
+<i class="fa fa-external-link-alt"></i></a></p><h3 id=12-安装-git>1.2 安装 Git
+<a class=header-anchor href=#12-%e5%ae%89%e8%a3%85-git></a></h3><p><a href=https://git-scm.com/book/en/v2/Getting-Started-Installing-Git title="Git - Installing Git (git-scm.com)" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Git - Installing Git (git-scm.com)
+<i class="fa fa-external-link-alt"></i></a></p><h2 id=ii-创建站点>II. 创建站点
+<a class=header-anchor href=#ii-%e5%88%9b%e5%bb%ba%e7%ab%99%e7%82%b9></a></h2><h3 id=21-安装确认>2.1 安装确认
+<a class=header-anchor href=#21-%e5%ae%89%e8%a3%85%e7%a1%ae%e8%ae%a4></a></h3><p>确认已安装 <code>Hugo v0.112.0</code> 或更高版本，在 Git Bash 下执行以下命令：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>hugo version
+</span></span></code></pre></div><h3 id=22-创建站点>2.2 创建站点
+<a class=header-anchor href=#22-%e5%88%9b%e5%bb%ba%e7%ab%99%e7%82%b9></a></h3><ol><li>在本地选择合适的站点存放路径。</li><li>在 Git Bash 中执行以下命令为站点创建
+<a href=https://gohugo.io/getting-started/directory-structure/ title=目录结构 rel="noopener external nofollow noreferrer" target=_blank class=exturl>目录结构
+<i class="fa fa-external-link-alt"></i>
+</a>：</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>hugo new site blog
+</span></span></code></pre></div><h3 id=23-创建源码仓库>2.3 创建源码仓库
+<a class=header-anchor href=#23-%e5%88%9b%e5%bb%ba%e6%ba%90%e7%a0%81%e4%bb%93%e5%ba%93></a></h3><ol><li>登录
+<a href=https://github.com/ title=GitHub rel="noopener external nofollow noreferrer" target=_blank class=exturl>GitHub
+<i class="fa fa-external-link-alt"></i>
+</a>仪表板。</li><li>创建仓库并命名，如：<code>blog</code></li><li>⨀ Private（设置为私有仓库）</li></ol><h3 id=24-关联源码仓库>2.4 关联源码仓库
+<a class=header-anchor href=#24-%e5%85%b3%e8%81%94%e6%ba%90%e7%a0%81%e4%bb%93%e5%ba%93></a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>cd blog
+</span></span><span style=display:flex><span>git init -b main
+</span></span><span style=display:flex><span>git remote add origin git@github.com:user/repo.git
+</span></span><span style=display:flex><span>git pull --rebase origin main
+</span></span><span style=display:flex><span>git add .
+</span></span><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#34;Initial commit&#34;</span>
+</span></span><span style=display:flex><span>git branch -M main
+</span></span><span style=display:flex><span>git push -u origin main
+</span></span></code></pre></div><h3 id=25-主题配置>2.5 主题配置
+<a class=header-anchor href=#25-%e4%b8%bb%e9%a2%98%e9%85%8d%e7%bd%ae></a></h3><h4 id=251-主题下载>2.5.1 主题下载
+<a class=header-anchor href=#251-%e4%b8%bb%e9%a2%98%e4%b8%8b%e8%bd%bd></a></h4><p>可从
+<a href=https://themes.gohugo.io/ title="Hugo Themes" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Hugo Themes
+<i class="fa fa-external-link-alt"></i>
+</a>官方，或根据
+<a href=https://github.com/QIN2DIM/awesome-hugo-themes title=awesome-hugo-themes rel="noopener external nofollow noreferrer" target=_blank class=exturl>awesome-hugo-themes
+<i class="fa fa-external-link-alt"></i>
+</a>的 GitHub Stars 数量排行下载自己喜欢的主题，本教程使用
+<a href=https://github.com/hugo-next/hugo-theme-next title="Hugo NexT" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Hugo NexT
+<i class="fa fa-external-link-alt"></i>
+</a>主题“双子座 (Gemini)”页面。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>cd blog
+</span></span><span style=display:flex><span>mv hugo.toml hugo.toml.bak
+</span></span><span style=display:flex><span>git submodule add https://github.com/hugo-next/hugo-theme-next.git themes/hugo-theme-next
+</span></span><span style=display:flex><span>git submodule update --init --recursive
+</span></span><span style=display:flex><span>cp themes/hugo-theme-next/exampleSite/config.yaml .
+</span></span></code></pre></div><p>让 Git 在执行 <code>git clone</code> 和 <code>git pull</code> 时自动更新子模块：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>git config --global submodule.recurse true
+</span></span></code></pre></div><p>📢说明：这个命令会将 <code>submodule.recurse</code> 设置为全局配置，这意味着它会影响到所有使用该 Git 配置的仓库。你也可以在父仓库的 <code>.git/config</code> 文件中设置，使其只对该仓库生效。</p><h4 id=252-主题配置>2.5.2 主题配置
+<a class=header-anchor href=#252-%e4%b8%bb%e9%a2%98%e9%85%8d%e7%bd%ae></a></h4><p>编辑 <code>blog/config.yaml</code> 站点配置文件，以下是当前版本（v4.6.3）参考配置：</p><p>1.站点基础配置，根据个人需求修改👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># ---------------------------------------------------------------</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Hugo 引擎的基础配置</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Basic configure for Hugo engine </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># ---------------------------------------------------------------</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 站点域名，比如： https://hugo-next.eu.org</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Website domain, eg: https://hugo-next.eu.org</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>baseURL</span>: <span style=color:#ae81ff>https://blog.example.com</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 站点标题</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Website title</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>title</span>: <span style=color:#ae81ff>小明的博客</span>
+</span></span><span style=display:flex><span>...<span style=color:#ae81ff>...</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#-----------------------------------------</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Hugo NexT 主题参数配置</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Configure Settings for Hugo NexT theme</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#-----------------------------------------</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>params</span>:
+</span></span><span style=display:flex><span> <span style=color:#ae81ff>......</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># 站点基本信息</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># Site Information Settings</span>
+</span></span><span style=display:flex><span> <span style=color:#f92672>author</span>: <span style=color:#ae81ff>博客作者</span>
+</span></span><span style=display:flex><span> <span style=color:#f92672>subtitle</span>: <span style=color:#ae81ff>一个有趣的博客小站</span>
+</span></span><span style=display:flex><span> <span style=color:#f92672>description</span>: <span style=color:#ae81ff>在这里记录我的喜怒哀乐。</span>
+</span></span><span style=display:flex><span> <span style=color:#f92672>keywords</span>: <span style=color:#ae81ff>IT,前端,后端,Android,IOS,Web</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># 不同尺寸站点图标</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># Different size of favicon</span>
+</span></span><span style=display:flex><span> <span style=color:#f92672>favicon</span>:
+</span></span><span style=display:flex><span>   <span style=color:#f92672>icon</span>: <span style=color:#ae81ff>/imgs/icons/favicon.ico</span>
+</span></span><span style=display:flex><span>   <span style=color:#f92672>small</span>: <span style=color:#ae81ff>/imgs/icons/favicon_16x16_next.png</span>
+</span></span><span style=display:flex><span>   <span style=color:#f92672>medium</span>: <span style=color:#ae81ff>/imgs/icons/favicon_32_32_next.png</span>
+</span></span><span style=display:flex><span>   <span style=color:#f92672>appleTouchIcon</span>: <span style=color:#ae81ff>/imgs/icons/apple_touch_icon_next.png</span>
+</span></span></code></pre></div><p>📢说明：在 <code>blog/static/imgs/icons/</code> 目录上传自定义站点图标（
+<a href=https://github.com/hugo-next/hugo-theme-next/discussions/38 title="Discussion #38" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Discussion #38
+<i class="fa fa-external-link-alt"></i>
+</a>）。</p><p>2.参考主题示例站点，创建相关目录和文件（
+<a href=https://github.com/hugo-next/hugo-theme-next/discussions/47 title="Discussion #47" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Discussion #47
+<i class="fa fa-external-link-alt"></i>
+</a>）👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>cp themes/hugo-theme-next/exampleSite/content/about.md content/
+</span></span><span style=display:flex><span>cp themes/hugo-theme-next/exampleSite/content/flinks.md content/
+</span></span><span style=display:flex><span>cp -r themes/hugo-theme-next/exampleSite/content/archives/_index.md content/archives/
+</span></span><span style=display:flex><span>mkdir content/knowledge
+</span></span><span style=display:flex><span>mkdir content/lives
+</span></span></code></pre></div><p>3.根据个人需求增删菜单，自定义菜单显示顺序👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>menus</span>:
+</span></span><span style=display:flex><span> <span style=color:#f92672>main</span>:
+</span></span><span style=display:flex><span>   - <span style=color:#f92672>identifier</span>: <span style=color:#ae81ff>home</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>name</span>: <span style=color:#ae81ff>首页</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>pageref</span>: <span style=color:#ae81ff>/</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>pre</span>: <span style=color:#ae81ff>home</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>weight</span>: <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>   - <span style=color:#f92672>identifier</span>: <span style=color:#ae81ff>about</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>name</span>: <span style=color:#ae81ff>关于</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>pageref</span>: <span style=color:#ae81ff>/about.html</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>pre</span>: <span style=color:#ae81ff>user</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>weight</span>: <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>   - <span style=color:#f92672>identifier</span>: <span style=color:#ae81ff>knowledge</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>name</span>: <span style=color:#ae81ff>知识</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>pageref</span>: <span style=color:#ae81ff>/knowledge</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>pre</span>: <span style=color:#ae81ff>book</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>weight</span>: <span style=color:#ae81ff>3</span>
+</span></span><span style=display:flex><span>   - <span style=color:#f92672>identifier</span>: <span style=color:#ae81ff>lives</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>name</span>: <span style=color:#ae81ff>生活</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>pageref</span>: <span style=color:#ae81ff>/lives</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>pre</span>: <span style=color:#ae81ff>sun</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>weight</span>: <span style=color:#ae81ff>4</span>
+</span></span><span style=display:flex><span>   <span style=color:#75715e># - identifier: flinks</span>
+</span></span><span style=display:flex><span>   <span style=color:#75715e>#   name: 站点示例</span>
+</span></span><span style=display:flex><span>   <span style=color:#75715e>#   pageref: /flinks.html</span>
+</span></span><span style=display:flex><span>   <span style=color:#75715e>#   pre: thumbs-up</span>
+</span></span><span style=display:flex><span>   <span style=color:#75715e>#   weight: 3</span>
+</span></span><span style=display:flex><span>   <span style=color:#75715e># - identifier: archives</span>
+</span></span><span style=display:flex><span>   <span style=color:#75715e>#   name: 归档</span>
+</span></span><span style=display:flex><span>   <span style=color:#75715e>#   pageref: /archives</span>
+</span></span><span style=display:flex><span>   <span style=color:#75715e>#   pre: archive</span>
+</span></span><span style=display:flex><span>   <span style=color:#75715e>#   weight: 5</span>
+</span></span><span style=display:flex><span>   - <span style=color:#f92672>identifier</span>: <span style=color:#ae81ff>commonweal</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>name</span>: <span style=color:#ae81ff>公益</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>url</span>: <span style=color:#ae81ff>/404.html</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>pre</span>: <span style=color:#ae81ff>heartbeat</span>
+</span></span><span style=display:flex><span>	 <span style=color:#f92672>weight</span>: <span style=color:#ae81ff>5</span>
+</span></span></code></pre></div><p>如果同时想更换菜单图标，在
+<a href=https://fontawesome.com/ title="Font Awesome" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Font Awesome
+<i class="fa fa-external-link-alt"></i>
+</a>网站 Icons 菜单中搜索如： <code>knowledge</code> ，从 VUE 的 “Default Style” 中提取如下参数 <code>book</code> （
+<a href=https://github.com/hugo-next/hugo-theme-next/discussions/88 title="Discussion #88" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Discussion #88
+<i class="fa fa-external-link-alt"></i>
+</a>），然后在上面自定义菜单中更新参数 <code>pre: book</code> 。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#f92672>font-awesome-icon</span> <span style=color:#a6e22e>icon</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;book&#34;</span> /&gt;
+</span></span></code></pre></div><p>增删菜单项后，还需配置文章存放目录以在主页显示文章（
+<a href=https://github.com/hugo-next/hugo-theme-next/discussions/98 title="Discussion #98" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Discussion #98
+<i class="fa fa-external-link-alt"></i>
+</a>）👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>params</span>:
+</span></span><span style=display:flex><span>  <span style=color:#75715e># 需要显示文章的部分，即content目录下的文件夹名称</span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e># Sections for show in home &amp; archive page </span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e># and it&#39;s forlder name which under content</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>mainSections</span>: [<span style=color:#e6db74>&#34;knowledge&#34;</span>, <span style=color:#e6db74>&#34;lives&#34;</span>]
+</span></span><span style=display:flex><span>  <span style=color:#ae81ff>......</span>
+</span></span></code></pre></div><p>4.Hugo Next 主题默认文章目录显示会自动设置列表数字，如果文章标题有自定义序号，会重复显示标题序号，修改如下👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># 文章目录显示</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Table of Contents in the Sidebar</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Front-matter variable (nonsupport wrap expand_all).</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>toc</span>:
+</span></span><span style=display:flex><span><span style=color:#f92672>enable</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 自动设置列表的数字</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Automatically add list number to toc.</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>number</span>: <span style=color:#66d9ef>false</span>
+</span></span></code></pre></div><p>5.根据个人需求增删社交链接👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e>#socials:</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>social0</span>: <span style=color:#ae81ff>Github || https://github.com/elkan1788 || fab fa-github</span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>#social1: E-Mail || mailto:yourname@gmail.com || fa fa-envelope</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>social2</span>: <span style=color:#ae81ff>知乎 || https://www.zhihu.com/people/lisenhui || fa fa-book</span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>#Google: https://plus.google.com/yourname || fab fa-google</span>
+</span></span><span style=display:flex><span>  <span style=color:#ae81ff>......</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># links:</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#   link0: Hugo-NexT || https://gitee.com/hugo-next/hugo-theme-next</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#   link1: 凡梦星尘空间站 || https://lisenhui.cn</span>
+</span></span></code></pre></div><p>6.根据实际需求增删备案和供应商👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># 国内 ICP 备案和公安网备信息</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Beian ICP and gongan information for Chinese users. </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># See: https://beian.miit.gov.cn, http://www.beian.gov.cn</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>beian</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>enable</span>: <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>...<span style=color:#ae81ff>...</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 站点支持供应商列表</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Vendors list who support website. </span>
+</span></span><span style=display:flex><span><span style=color:#f92672>vendors</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>enable</span>: <span style=color:#66d9ef>false</span>
+</span></span></code></pre></div><p>7.使用 Waline 做文章统计和评论统计（需先开启 Waline 评论组件，参考本教程 5.1.1 章节）</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># 是否开启评论数显示</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>comments</span>: 
+</span></span><span style=display:flex><span>  <span style=color:#f92672>enable</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e># 评论统计插件，暂只支持waline</span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e># Comment counter plugin, only support waline</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>plugin</span>: <span style=color:#ae81ff>waline</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 是否开启页面访问数显示</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>views</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>enable</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e># 页面访问统计插件，支持busuanzi, waline, leancloud</span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e># Page views counter plugin, support: busuanzi, waline, leancloud</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>plugin</span>: <span style=color:#ae81ff>waline</span>
+</span></span></code></pre></div><p>8.根据个人需求{开启|关闭}捐赠👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># 捐赠信息设置</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Donate (Sponsor) settings.</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>rewardSets</span>:
+</span></span><span style=display:flex><span><span style=color:#75715e># 是否开启捐赠按钮，开启后将在每个文章页面底部显示</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># If true, a donate button will be displayed </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># in every article by default.</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>enable</span>: <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>  <span style=color:#ae81ff>......</span>
+</span></span></code></pre></div><p>9.根据个人需求{开启|关闭}其它订阅站点👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># followMe:</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#channel0: Twitter || https://twitter.com/username || fab fa-twitter</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#channel1: Telegram || https://t.me/channel_name || fab fa-telegram</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>channel2</span>: <span style=color:#ae81ff>WeChat || /images/wechat_channel.jpg || fab fa-weixin</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>channel3</span>: <span style=color:#ae81ff>RSS || /atom.xml || fa fa-rss</span>
+</span></span><span style=display:flex><span>...<span style=color:#ae81ff>...</span>
+</span></span></code></pre></div><p>10.根据个人需求{开启|关闭}在线编辑功能👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># 文章的在线编辑</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Post edit</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Easily browse and edit blog source code online.</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>postEdit</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>enable</span>: <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>url</span>: <span style=color:#ae81ff>https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name/</span>
+</span></span></code></pre></div><p>11.根据个人需求{开启|关闭}右上角在 Github 上面关注我的横幅👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># 右上角在 Github 上面关注我的横幅</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># `Follow me on GitHub` banner in the top-right corner.</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>githubBanner</span>:
+</span></span><span style=display:flex><span><span style=color:#75715e># 是否开启显示</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># If true, will display banner.</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>enable</span>: <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>...<span style=color:#ae81ff>...</span>
+</span></span></code></pre></div><p>12.根据个人需求{开启|关闭}评论组件👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># 评论组件设置，最多支持2个显示</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Multiple Comment System Support</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>comments</span>:
+</span></span><span style=display:flex><span><span style=color:#75715e># 开启评论组件</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># If true, will show comment component in post end.</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>enable</span>: <span style=color:#66d9ef>false</span>
+</span></span></code></pre></div><p>13.使用 51LA 作站点统计（需注册账号）</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>siteState</span>: 
+</span></span><span style=display:flex><span> <span style=color:#75715e># 是否在侧边栏显示文章、分类、标签信息</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># Posts / Categories / Tags in sidebar.</span>
+</span></span><span style=display:flex><span> <span style=color:#f92672>basic</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># 站点访问信息</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># Site&#39;s view information</span>
+</span></span><span style=display:flex><span> <span style=color:#f92672>views</span>:  
+</span></span><span style=display:flex><span>   <span style=color:#f92672>enable</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>   <span style=color:#75715e># 组件类型，可选值为： 51la, busuanzi</span>
+</span></span><span style=display:flex><span>   <span style=color:#75715e># 使用51la时需要注册账号：https://invite.51.la/</span>
+</span></span><span style=display:flex><span>   <span style=color:#75715e># Plguin value is: 51la, busuanzi</span>
+</span></span><span style=display:flex><span>   <span style=color:#f92672>plugin</span>: <span style=color:#ae81ff>51la</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>...<span style=color:#ae81ff>...</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>analytics</span>:
+</span></span><span style=display:flex><span> <span style=color:#75715e># 51La 站点统计</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># 更多信息请参考：https://invite.51.la/1NUfGTS1?target=V6</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># 51La Analytics</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># See: https://invite.51.la/1NUfGTS1?target=V6 </span>
+</span></span><span style=display:flex><span> <span style=color:#f92672>laId</span>: <span style=color:#ae81ff>123456789ABCDEFG</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># 百度统计</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># Baidu Analytics</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e>#baidu: #&lt;anaytics_id&gt;</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># 谷歌统计</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># Google Analytics</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e>#google: #&lt;anaytics_id&gt;</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># 不蒜子统计</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># Show Views / Visitors of the website / page with busuanzi.</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># For more information: http://ibruce.info/2015/04/04/busuanzi/</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e># busuanzi:</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e>#   visitorsIcon: fa fa-user</span>
+</span></span><span style=display:flex><span> <span style=color:#75715e>#   viewsIcon: fa fa-eye</span>
+</span></span></code></pre></div><p>14.把侧边栏“日志”改为“文章”（可选）👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>cp themes/hugo-theme-next/i18n/zh-cn.yaml i18n/
+</span></span></code></pre></div><p>把 <code>i18n/zh-cn.yaml</code> 中 <code>posts: 日志</code>改为👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>Sidebar</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>label</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>posts</span>: <span style=color:#ae81ff>文章</span>
+</span></span></code></pre></div><p>把“目前共计……日志”改为👇</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>Terms</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>archives</span>: <span style=color:#e6db74>&#34;目前共计 &lt;strong&gt;{{ .Count }}&lt;/strong&gt; 篇文章&#34;</span>
+</span></span></code></pre></div><p>15.去掉文章正文中 <strong>3 级</strong>和 <strong>4 级</strong>标题下方横线（可选）👇<br>需开启“用户自定义文件配置”，如下：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># 用户自定义文件配置</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Define custom file paths.</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>customFilePath</span>:
+</span></span><span style=display:flex><span><span style=color:#75715e>#   sidebar: custom_sidebar.html</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#   footer: custom_footer.html</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>style</span>: <span style=color:#ae81ff>/css/custom_style.css</span>
+</span></span></code></pre></div><p>在 <code>static/css/custom_style.css</code> 添加以下内容</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-css data-lang=css><span style=display:flex><span>.<span style=color:#a6e22e>post-body</span> <span style=color:#f92672>h1</span><span style=color:#f92672>,</span>.<span style=color:#a6e22e>post-body</span> <span style=color:#f92672>h2</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>border-bottom</span>: <span style=color:#ae81ff>1</span><span style=color:#66d9ef>px</span> <span style=color:#66d9ef>solid</span> <span style=color:#ae81ff>#eee</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>.<span style=color:#a6e22e>post-body</span> <span style=color:#f92672>h3</span><span style=color:#f92672>,</span>.<span style=color:#a6e22e>post-body</span> <span style=color:#f92672>h4</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>border-bottom</span>: <span style=color:#ae81ff>0</span><span style=color:#66d9ef>px</span> <span style=color:#66d9ef>dotted</span> <span style=color:#ae81ff>#eee</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=iii-创建文章>III. 创建文章
+<a class=header-anchor href=#iii-%e5%88%9b%e5%bb%ba%e6%96%87%e7%ab%a0></a></h2><h3 id=31-配置文章模板>3.1 配置文章模板
+<a class=header-anchor href=#31-%e9%85%8d%e7%bd%ae%e6%96%87%e7%ab%a0%e6%a8%a1%e6%9d%bf></a></h3><p>修改 <code>blog\archetypes\default.md</code> 中的参数，把 <code>draft = true</code> （表示这是一个草稿） 修改为 <code>draft = false</code> ，这样生成的文章默认就是可以发表的。</p><h3 id=32-发布文章>3.2 发布文章
+<a class=header-anchor href=#32-%e5%8f%91%e5%b8%83%e6%96%87%e7%ab%a0></a></h3><h4 id=321-创建文章>3.2.1 创建文章
+<a class=header-anchor href=#321-%e5%88%9b%e5%bb%ba%e6%96%87%e7%ab%a0></a></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>hugo new posts/knowledge/hello-world.md
+</span></span></code></pre></div><h4 id=322-增加前置格式>3.2.2 增加前置格式
+<a class=header-anchor href=#322-%e5%a2%9e%e5%8a%a0%e5%89%8d%e7%bd%ae%e6%a0%bc%e5%bc%8f></a></h4><p>使用
+<a href=https://gohugo.io/content-management/front-matter/ title="Front matter" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Front matter
+<i class="fa fa-external-link-alt"></i>
+</a>为 Hugo 文章添加元数据。以下为示例配置：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-markdown data-lang=markdown><span style=display:flex><span>+++
+</span></span><span style=display:flex><span>title = &#34;Hugo 静态博客部署&#34;
+</span></span><span style=display:flex><span>slug = &#34;hugo-static-blog-deployment&#34;
+</span></span><span style=display:flex><span>categories = [&#34;blog&#34;]
+</span></span><span style=display:flex><span>tags = [&#34;hugo&#34;]
+</span></span><span style=display:flex><span>draft = false
+</span></span><span style=display:flex><span>date = 2024-06-21T17:17:32+08:00
+</span></span><span style=display:flex><span>lastmod = 2024-06-21T17:35:13+08:00
+</span></span><span style=display:flex><span>+++
+</span></span></code></pre></div><p>参数说明：</p><ul><li><p>Taxonomies &ndash; Hugo 支持用户自定义分类法的功能（官方文档：
+<a href=https://gohugo.io/content-management/taxonomies/#configure-taxonomies title=Taxonomies rel="noopener external nofollow noreferrer" target=_blank class=exturl>Taxonomies
+<i class="fa fa-external-link-alt"></i>
+</a>）。</p></li><li><p>slug &ndash; 将
+<a href=https://gohugo.io/content-management/urls/#slug title=slug rel="noopener external nofollow noreferrer" target=_blank class=exturl>slug
+<i class="fa fa-external-link-alt"></i>
+</a>中的内容替换掉文章 URL 最后一段中文。标签值不会影响章节页面。</p></li></ul><h3 id=33-生成网页>3.3 生成网页
+<a class=header-anchor href=#33-%e7%94%9f%e6%88%90%e7%bd%91%e9%a1%b5></a></h3><p>通过以下命令在本地实时预览当前编辑内容：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>hugo server -D
+</span></span></code></pre></div><p>通过终端中显示的 URL 查看博客。按 Ctrl + C 停止 Hugo 的开发服务器。</p><h3 id=34-发布内容>3.4 发布内容
+<a class=header-anchor href=#34-%e5%8f%91%e5%b8%83%e5%86%85%e5%ae%b9></a></h3><p><code>hugo</code> 命令可以将你写的 Markdown 文件生成静态 HTML 网页，生成的 HTML 文件默认存放在站点路径下的 <code>public</code> 目录中。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>hugo
+</span></span></code></pre></div><h2 id=iv-自动部署>IV. 自动部署
+<a class=header-anchor href=#iv-%e8%87%aa%e5%8a%a8%e9%83%a8%e7%bd%b2></a></h2><h3 id=41-github-page-部署>4.1 GitHub Page 部署
+<a class=header-anchor href=#41-github-page-%e9%83%a8%e7%bd%b2></a></h3><h4 id=411-创建-github-pages>4.1.1 创建 GitHub Pages
+<a class=header-anchor href=#411-%e5%88%9b%e5%bb%ba-github-pages></a></h4><ol><li>登录
+<a href=https://github.com/ title=GitHub rel="noopener external nofollow noreferrer" target=_blank class=exturl>GitHub
+<i class="fa fa-external-link-alt"></i>
+</a>仪表板。</li><li>创建仓库并命名：<code>&lt;username></code>.github.io （<code>username</code> 必须是当前登录 GitHub 用户名）。</li><li>⨀ Public（设置为公开仓库）。</li></ol><h4 id=412-生成-api-令牌>4.1.2 生成 API 令牌
+<a class=header-anchor href=#412-%e7%94%9f%e6%88%90-api-%e4%bb%a4%e7%89%8c></a></h4><p>从博客源码仓库（以下简称 “仓库1”）推送到外部 GitHub Pages 仓库（以下简称 “仓库2”），需要特定权限，所以还得在 GitHub 账户 Setting -> Developer settings ->
+<a href=https://github.com/settings/tokens title="Personal Access Tokens (Classic)" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Personal Access Tokens (Classic)
+<i class="fa fa-external-link-alt"></i>
+</a>-> Generate new token (classic) 创建一个 Token：</p><ol><li>给 Token 备注一个名称，如：<code>my-tocken</code></li><li>到期时间：No expiration（永不过期）</li><li>范围选择：<code>repo</code> 与 <code>workflow</code></li><li>生成令牌（Generate token）</li></ol><h4 id=413-配置环境变量>4.1.3 配置环境变量
+<a class=header-anchor href=#413-%e9%85%8d%e7%bd%ae%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f></a></h4><p>进入博客源码仓库的 Settings：</p><ol><li>选择 “Secrets and variables” 下的 “Actions”，在 “Secrets” 选项卡中选择 “New repository secret” 项。</li><li>在 “Name” 中填入 <code>PERSONAL_TOKEN</code>，在 &ldquo;Secret&rdquo; 中填入前面生成的 token，点击 ”Add secret“ 保存。</li></ol><h4 id=414-创建工作流>4.1.4 创建工作流
+<a class=header-anchor href=#414-%e5%88%9b%e5%bb%ba%e5%b7%a5%e4%bd%9c%e6%b5%81></a></h4><p>返回源码仓库点击 “Actions” 按钮，搜索工作流 <code>hugo</code> ，找到后点击 “Configure”，修改后的配置内容如下（更详细用法参考
+<a href=https://github.com/marketplace/actions/github-pages-action title="GitHub Pages action" rel="noopener external nofollow noreferrer" target=_blank class=exturl>GitHub Pages action
+<i class="fa fa-external-link-alt"></i>
+</a>）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># Sample workflow for building and deploying a Hugo site to Github Pages</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Deploy Hugo site to Pages</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>on</span>:
+</span></span><span style=display:flex><span>  <span style=color:#75715e># 当这个项目仓库发生推送动作后，执行 GitHub Action</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>push</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>branches</span>: [<span style=color:#e6db74>&#34;main&#34;</span>]
+</span></span><span style=display:flex><span>  <span style=color:#75715e># 可以在 GitHub 项目仓库的 Action 工具栏进行手动调用</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>workflow_dispatch</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>jobs</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>build</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>steps</span>:
+</span></span><span style=display:flex><span>            - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Checkout</span>
+</span></span><span style=display:flex><span>              <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v4.1.7</span>
+</span></span><span style=display:flex><span>              <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>submodules</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>fetch-depth</span>: <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup Hugo</span>
+</span></span><span style=display:flex><span>              <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-hugo@v3</span>
+</span></span><span style=display:flex><span>              <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>hugo-version</span>: <span style=color:#e6db74>&#34;latest&#34;</span>
+</span></span><span style=display:flex><span>                  <span style=color:#75715e># 按需选择是否使用 hugo-extended</span>
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>extended</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build Web</span>
+</span></span><span style=display:flex><span>              <span style=color:#f92672>run</span>: <span style=color:#ae81ff>hugo</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Deploy Web</span>
+</span></span><span style=display:flex><span>              <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-gh-pages@v4</span>
+</span></span><span style=display:flex><span>              <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>                  <span style=color:#75715e># 生成的 token 就用在这里，因为下面用到 external repository</span>
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>PERSONAL_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.PERSONAL_TOKEN }}</span>
+</span></span><span style=display:flex><span>                  <span style=color:#75715e># 修改为你的 Github Pages 仓库</span>
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>EXTERNAL_REPOSITORY</span>: <span style=color:#ae81ff>user/user.github.io</span>
+</span></span><span style=display:flex><span>                  <span style=color:#75715e># 以及对应的分支 main/master</span>
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>PUBLISH_BRANCH</span>: <span style=color:#ae81ff>main</span>
+</span></span><span style=display:flex><span>                  <span style=color:#75715e># 指定将自动部署得到的 public 文件夹 push 上去</span>
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>PUBLISH_DIR</span>: <span style=color:#ae81ff>./public</span>
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>commit_message</span>: <span style=color:#ae81ff>${{ github.event.head_commit.message }}</span>
+</span></span></code></pre></div><h4 id=415-推送更新>4.1.5 推送更新
+<a class=header-anchor href=#415-%e6%8e%a8%e9%80%81%e6%9b%b4%e6%96%b0></a></h4><p>现在，可以在博客源码仓库中推送一片 <code>.md</code> 文章，GitHub Pages 仓库将同步更新，然后可以浏览 <code>&lt;username></code>.github.io （请替换为你的 URL）验证站点访问。</p><h3 id=42-cloudflare-pages-部署>4.2 Cloudflare Pages 部署
+<a class=header-anchor href=#42-cloudflare-pages-%e9%83%a8%e7%bd%b2></a></h3><p>Cloudflare Pages 更多集成部署请参考：
+<a href=https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration title="Use Direct Upload with continuous integration" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Use Direct Upload with continuous integration
+<i class="fa fa-external-link-alt"></i></a></p><h4 id=421-创建-cloudflare-pages>4.2.1 创建 Cloudflare Pages
+<a class=header-anchor href=#421-%e5%88%9b%e5%bb%ba-cloudflare-pages></a></h4><ol><li>登录
+<a href=https://dash.cloudflare.com/login title=Cloudflare rel="noopener external nofollow noreferrer" target=_blank class=exturl>Cloudflare
+<i class="fa fa-external-link-alt"></i>
+</a>仪表板。</li><li>在 “Workers 和 Pages” 菜单 -> Pages 中，“使用直接上传创建” -> 上传资产。为项目创建名称，如：<code>blog</code> 。</li></ol><h4 id=422-生成-api-令牌>4.2.2 生成 API 令牌
+<a class=header-anchor href=#422-%e7%94%9f%e6%88%90-api-%e4%bb%a4%e7%89%8c></a></h4><p>要生成 API 令牌：</p><ol><li>登录
+<a href=https://dash.cloudflare.com/login title=Cloudflare rel="noopener external nofollow noreferrer" target=_blank class=exturl>Cloudflare
+<i class="fa fa-external-link-alt"></i>
+</a>仪表板。</li><li>从仪表板右上角用户图标的下拉菜单中选择“我的个人资料”。</li><li>选择 API 令牌 > 创建令牌。</li><li>在“自定义令牌”下，选择“开始使用”。参考如下配置：👇</li></ol><p><img src=/imgs/img-lazy-loading.gif data-src=https://67d3beb.webp.li/imgs/2024/07/26/820364a2b35d8505777c44b74dbed04b.png alt=Pic_2024-07-24_140430></p><ol start=5><li>选择“继续显示摘要” > 创建令牌。</li></ol><h4 id=423-获取账户-id>4.2.3 获取账户 ID
+<a class=header-anchor href=#423-%e8%8e%b7%e5%8f%96%e8%b4%a6%e6%88%b7-id></a></h4><p>要查找您的账户 ID，请登录
+<a href=https://dash.cloudflare.com/login title=Cloudflare rel="noopener external nofollow noreferrer" target=_blank class=exturl>Cloudflare
+<i class="fa fa-external-link-alt"></i>
+</a>仪表板 > 在账户主页中选择您的区域 > 在右侧菜单 API 下的概览中查找您的账户 ID。如果您尚未添加区域，请通过选择“添加站点”来添加区域。您可以从 Cloudflare 的注册商处购买域名。</p><h4 id=424-配置环境变量>4.2.4 配置环境变量
+<a class=header-anchor href=#424-%e9%85%8d%e7%bd%ae%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f></a></h4><p>进入
+<a href=https://github.com/ title=GitHub rel="noopener external nofollow noreferrer" target=_blank class=exturl>GitHub
+<i class="fa fa-external-link-alt"></i>
+</a>博客源码仓库的 Settings：</p><ol><li>选择 “Secrets and variables” 下的 “Actions”，在 “Secrets” 选项卡中选择 “New repository secret” 项。</li><li>在 “Name” 中填入 <code>CLOUDFLARE_API_TOKEN</code>，在 &ldquo;Secret&rdquo; 中填入 <strong>4.2.2 章节</strong>生成的 API Token ，点击 ”Add secret“ 保存。</li><li>以同样的方法创建 <code>CLOUDFLARE_ACCOUNT_ID</code> ，填入 <strong>4.2.3 章节</strong>获取的账户 ID 。</li></ol><h4 id=425-创建工作流>4.2.5 创建工作流
+<a class=header-anchor href=#425-%e5%88%9b%e5%bb%ba%e5%b7%a5%e4%bd%9c%e6%b5%81></a></h4><p>返回
+<a href=https://github.com/ title=GitHub rel="noopener external nofollow noreferrer" target=_blank class=exturl>GitHub
+<i class="fa fa-external-link-alt"></i>
+</a>源码仓库点击 “Actions” 按钮，搜索工作流 <code>hugo</code> ，找到后点击 “Configure”，将 <code>YOUR_PROJECT_NAME</code> 替换为你的 Cloudflare Pages 项目名称。修改后的配置内容如下（更详细用法参考
+<a href=https://github.com/marketplace/actions/cloudflare-pages-github-action title="Cloudflare Pages GitHub Action" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Cloudflare Pages GitHub Action
+<i class="fa fa-external-link-alt"></i>
+</a>）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># Sample workflow for building and deploying a Hugo site to Cloudflare Pages</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Deploy Hugo site to Cloudflare Pages</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>on</span>:
+</span></span><span style=display:flex><span>  <span style=color:#75715e># 当这个项目仓库发生推送动作后，执行 GitHub Action</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>push</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>branches</span>: [<span style=color:#e6db74>&#34;main&#34;</span>]
+</span></span><span style=display:flex><span>  <span style=color:#75715e># 可以在 GitHub 项目仓库的 Action 工具栏进行手动调用</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>workflow_dispatch</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>jobs</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>publish</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>permissions</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>contents</span>: <span style=color:#ae81ff>read</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>deployments</span>: <span style=color:#ae81ff>write</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Publish to Cloudflare Pages</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>steps</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Checkout</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v4</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e># Run a build step here if your project requires</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Publish to Cloudflare Pages</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>cloudflare/pages-action@v1.5</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>apiToken</span>: <span style=color:#ae81ff>${{ secrets.CLOUDFLARE_API_TOKEN }}</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>accountId</span>: <span style=color:#ae81ff>${{ secrets.CLOUDFLARE_ACCOUNT_ID }}</span>
+</span></span><span style=display:flex><span>          <span style=color:#75715e># Cloudflare Pages projects name</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>projectName</span>: <span style=color:#ae81ff>YOUR_PROJECT_NAME</span>
+</span></span><span style=display:flex><span>          <span style=color:#75715e># Publish directory</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>directory</span>: <span style=color:#ae81ff>./public</span>
+</span></span><span style=display:flex><span>          <span style=color:#75715e># Optional: Enable this if you want to have GitHub Deployments triggered</span>
+</span></span><span style=display:flex><span>          <span style=color:#75715e># gitHubToken: ${{ secrets.GITHUB_TOKEN }}</span>
+</span></span><span style=display:flex><span>          <span style=color:#75715e># Optional: Switch what branch you are publishing to.</span>
+</span></span><span style=display:flex><span>          <span style=color:#75715e># By default this will be the branch which triggered this workflow</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>branch</span>: <span style=color:#ae81ff>main</span>
+</span></span><span style=display:flex><span>          <span style=color:#75715e># Optional: Change the working directory</span>
+</span></span><span style=display:flex><span>          <span style=color:#75715e># workingDirectory: my-site</span>
+</span></span><span style=display:flex><span>          <span style=color:#75715e># Optional: Change the Wrangler version, allows you to point to a specific version or a tag such as `beta`</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>wranglerVersion</span>: <span style=color:#e6db74>&#39;3&#39;</span>
+</span></span></code></pre></div><h4 id=426-推送更新>4.2.6 推送更新
+<a class=header-anchor href=#426-%e6%8e%a8%e9%80%81%e6%9b%b4%e6%96%b0></a></h4><p>现在，可以在博客源码仓库中推送一片 <code>.md</code> 文章，GitHub Action 将自动把 <code>public</code> 目录下的 html 文件推送至 Pages 项目目录，然后可以浏览 Cloudflare Pages 为您提供的默认域名，如 <code>blog.pages.dev</code> （请替换为你的 URL）验证站点访问。</p><h3 id=43-服务器部署>4.3 服务器部署
+<a class=header-anchor href=#43-%e6%9c%8d%e5%8a%a1%e5%99%a8%e9%83%a8%e7%bd%b2></a></h3><h4 id=431-服务器准备>4.3.1 服务器准备
+<a class=header-anchor href=#431-%e6%9c%8d%e5%8a%a1%e5%99%a8%e5%87%86%e5%a4%87></a></h4><ol><li>在远程服务器上创建站点存放目录。如：<code>/var/www/blog/</code></li><li>在服务器上安装 <code>rsync</code> 工具。</li><li>服务器安全考虑，建议修改 SSH 远程连接端口（默认： <code>22</code>）。</li><li>SSH 用户准备，非 <code>root</code> 用户注意须赋予对站点目录读写权限。</li><li>为 SSH 用户生成密钥对，公钥部分应添加到服务器上的 <code>authorized_keys</code> 文件中。</li></ol><h4 id=432-nginx-部署>4.3.2 Nginx 部署
+<a class=header-anchor href=#432-nginx-%e9%83%a8%e7%bd%b2></a></h4><ol><li>根据服务器 OS 不同安装对应版本
+<a href=https://nginx.org/en/linux_packages.html title=nginx rel="noopener external nofollow noreferrer" target=_blank class=exturl>nginx
+<i class="fa fa-external-link-alt"></i>
+</a>应用。</li><li>若需要配置域名 SSL 证书，建议通过
+<a href=https://github.com/acmesh-official/acme.sh title="acme.sh (github.com)" rel="noopener external nofollow noreferrer" target=_blank class=exturl>acme.sh (github.com)
+<i class="fa fa-external-link-alt"></i>
+</a>部署。</li></ol><h4 id=433-配置环境变量>4.3.3 配置环境变量
+<a class=header-anchor href=#433-%e9%85%8d%e7%bd%ae%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f></a></h4><p>进入博客源码仓库的 Settings：</p><ol><li>选择 “Secrets and variables” 下的 “Actions”，在 “Secrets” 选项卡中选择 “New repository secret” 项。</li><li>为工作流中 <code>remote_host</code>、<code>remote_port</code>、<code>remote_user</code> 和 <code>remote_path</code> 等参数创建额外的 secret 。</li></ol><h4 id=434-创建工作流>4.3.4 创建工作流
+<a class=header-anchor href=#434-%e5%88%9b%e5%bb%ba%e5%b7%a5%e4%bd%9c%e6%b5%81></a></h4><p>在源码仓库点击 “Actions” 按钮，搜索工作流 <code>hugo</code> ，找到后点击 “Configure”，修改后的配置内容如下（更详细用法参考
+<a href=https://github.com/marketplace/actions/rsync-deployments-action title="Rsync Deployments Action" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Rsync Deployments Action
+<i class="fa fa-external-link-alt"></i>
+</a>）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># Sample workflow for building and deploying a Hugo site to Server</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Deploy Hugo site to Server</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>on</span>:
+</span></span><span style=display:flex><span>  <span style=color:#75715e># 当这个项目仓库发生推送动作后，执行 GitHub Action</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>push</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>branches</span>: [<span style=color:#e6db74>&#34;main&#34;</span>]
+</span></span><span style=display:flex><span>  <span style=color:#75715e># 可以在 GitHub 项目仓库的 Action 工具栏进行手动调用</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>workflow_dispatch</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>jobs</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>build</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>steps</span>:
+</span></span><span style=display:flex><span>            - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Checkout</span>
+</span></span><span style=display:flex><span>              <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v4.1.7</span>
+</span></span><span style=display:flex><span>              <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>submodules</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>fetch-depth</span>: <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup Hugo</span>
+</span></span><span style=display:flex><span>              <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-hugo@v3</span>
+</span></span><span style=display:flex><span>              <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>hugo-version</span>: <span style=color:#e6db74>&#34;latest&#34;</span>
+</span></span><span style=display:flex><span>                  <span style=color:#75715e># 按需选择是否使用 hugo-extended</span>
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>extended</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build Web</span>
+</span></span><span style=display:flex><span>              <span style=color:#f92672>run</span>: <span style=color:#ae81ff>hugo</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Rsync Deployments</span>
+</span></span><span style=display:flex><span>              <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>burnett01/rsync-deployments@7.0.1</span>
+</span></span><span style=display:flex><span>              <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>                <span style=color:#75715e># rsync 同步选项</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>switches</span>: -<span style=color:#ae81ff>avzr --delete</span>
+</span></span><span style=display:flex><span>                <span style=color:#75715e># 本地仓库同步目录</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>path</span>: <span style=color:#ae81ff>./public/*</span>
+</span></span><span style=display:flex><span>                <span style=color:#75715e># 远程仓库同步目录</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>remote_path</span>: <span style=color:#ae81ff>${{ secrets.DEPLOY_PATH }}</span>
+</span></span><span style=display:flex><span>                <span style=color:#75715e># 远程服务器域名或IP</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>remote_host</span>: <span style=color:#ae81ff>${{ secrets.DEPLOY_HOST }}</span>
+</span></span><span style=display:flex><span>                <span style=color:#75715e># 远程服务器端口</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>remote_port</span>: <span style=color:#ae81ff>${{ secrets.DEPLOY_PORT }}</span>
+</span></span><span style=display:flex><span>                <span style=color:#75715e># 远程服务器用户</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>remote_user</span>: <span style=color:#ae81ff>${{ secrets.DEPLOY_USER }}</span>
+</span></span><span style=display:flex><span>                <span style=color:#75715e># 远程服务器用户私钥</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>remote_key</span>: <span style=color:#ae81ff>${{ secrets.DEPLOY_KEY }}</span>
+</span></span><span style=display:flex><span>                <span style=color:#75715e># 远程服务器用户私钥密码</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>remote_key_pass</span>: <span style=color:#ae81ff>${{ secrets.DEPLOY_KEY_PASS }}</span>
+</span></span></code></pre></div><h4 id=435-推送更新>4.3.5 推送更新
+<a class=header-anchor href=#435-%e6%8e%a8%e9%80%81%e6%9b%b4%e6%96%b0></a></h4><p>现在，可以在博客源码仓库中推送一片 <code>.md</code> 文章，GitHub Action 将自动把 <code>public</code> 目录下的 html 文件推送至远程服务器 <code>/var/www/blog/</code> 站点目录，然后可以浏览你的远程服务器域名，如 <code>blog.example.com</code> （请替换为你的 URL）验证站点访问。</p><h2 id=v-博客维护>V. 博客维护
+<a class=header-anchor href=#v-%e5%8d%9a%e5%ae%a2%e7%bb%b4%e6%8a%a4></a></h2><h3 id=51-开启评论组件可选>5.1 开启评论组件(可选)
+<a class=header-anchor href=#51-%e5%bc%80%e5%90%af%e8%af%84%e8%ae%ba%e7%bb%84%e4%bb%b6%e5%8f%af%e9%80%89></a></h3><h4 id=511-waline>5.1.1 Waline
+<a class=header-anchor href=#511-waline></a></h4><p>详细配置信息请参考：
+<a href=https://waline.js.org/ title=Waline rel="noopener external nofollow noreferrer" target=_blank class=exturl>Waline
+<i class="fa fa-external-link-alt"></i></a></p><p>使用 Cloudflare CNAME 代理访问评论系统，Web 页面可能会出现重定向次数过多问题，请参考本教程 <strong>5.4.2 章节</strong>解决。</p><h4 id=512-giscus>5.1.2 Giscus
+<a class=header-anchor href=#512-giscus></a></h4><p>详细配置信息请参考：
+<a href=https://giscus.app/zh-CN title=giscus rel="noopener external nofollow noreferrer" target=_blank class=exturl>giscus
+<i class="fa fa-external-link-alt"></i></a></p><h3 id=52-升级主题>5.2 升级主题
+<a class=header-anchor href=#52-%e5%8d%87%e7%ba%a7%e4%b8%bb%e9%a2%98></a></h3><p>手动升级主题时，在站点目录下执行以下命令：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>cd blog
+</span></span><span style=display:flex><span>git submodule update --remote
+</span></span></code></pre></div><h3 id=53-hugo-常用命令>5.3 Hugo 常用命令
+<a class=header-anchor href=#53-hugo-%e5%b8%b8%e7%94%a8%e5%91%bd%e4%bb%a4></a></h3><h4 id=531-清除缓存>5.3.1 清除缓存
+<a class=header-anchor href=#531-%e6%b8%85%e9%99%a4%e7%bc%93%e5%ad%98></a></h4><p>在开发环境中，有时缓存可能会导致问题。尝试清除 Hugo 缓存并重新生成站点：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>hugo --cleanDestinationDir
+</span></span></code></pre></div><h4 id=532-调试日志>5.3.2 调试日志
+<a class=header-anchor href=#532-%e8%b0%83%e8%af%95%e6%97%a5%e5%bf%97></a></h4><p>检查 Hugo 构建时的日志，看看是否有任何错误或警告信息：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>hugo server -v
+</span></span></code></pre></div><h3 id=54--常见问题>5.4 常见问题
+<a class=header-anchor href=#54--%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98></a></h3><h4 id=541-新手问题>5.4.1 新手问题
+<a class=header-anchor href=#541-%e6%96%b0%e6%89%8b%e9%97%ae%e9%a2%98></a></h4><p>如果你是初次建站的话，可以使用 Github 的模板功能，一键生成你的站点仓库代码。访问
+<a href=https://github.com/hugo-next/hugo-theme-next-starter title=hugo-theme-next-starter rel="noopener external nofollow noreferrer" target=_blank class=exturl>hugo-theme-next-starter
+<i class="fa fa-external-link-alt"></i>
+</a>点击右上角的 <code>Use this template</code> 绿色按钮然后填写代码仓库的相关信息，详细参考
+<a href=https://github.com/hugo-next/hugo-theme-next title="Hugo NexT" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Hugo NexT
+<i class="fa fa-external-link-alt"></i>
+</a>主题 README ，完成后克隆到本地测试，再根据个人喜好创建个性化配置。</p><h4 id=542-重定向次数过多>5.4.2 重定向次数过多
+<a class=header-anchor href=#542-%e9%87%8d%e5%ae%9a%e5%90%91%e6%ac%a1%e6%95%b0%e8%bf%87%e5%a4%9a></a></h4><p>参考文档：
+<a href=https://blog.csdn.net/AlvinCasper/article/details/112727903 title="访问后台出现重定向次数过多该怎么办 | CSDN" rel="noopener external nofollow noreferrer" target=_blank class=exturl>访问后台出现重定向次数过多该怎么办 | CSDN
+<i class="fa fa-external-link-alt"></i></a></p><p><strong>原因</strong>：</p><p>Cloudflare 开启 SSL 证书后默认是灵活 SSL，仅在访问者与 Cloudflare 之间启用加密。这可以避免浏览器发出安全警告，但 Cloudflare 与您的源服务器之间的所有连接均通过 HTTP 建立。</p><p><strong>解决方法</strong>：</p><p>对于采用 Cloudflare 提供的 CDN 加速来说，将“灵活” SSL 切换到“完全” SSL。</p><h2 id=vi-参考文档>VI. 参考文档
+<a class=header-anchor href=#vi-%e5%8f%82%e8%80%83%e6%96%87%e6%a1%a3></a></h2><p>中文文档：
+<a href=https://hugo.opendocs.io/ title="Hugo 中文文档 (opendocs.io)" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Hugo 中文文档 (opendocs.io)
+<i class="fa fa-external-link-alt"></i></a></p><p>英文文档：
+<a href=https://gohugo.io/documentation/ title="Hugo Documentation | Hugo (gohugo.io)" rel="noopener external nofollow noreferrer" target=_blank class=exturl>Hugo Documentation | Hugo (gohugo.io)
+<i class="fa fa-external-link-alt"></i></a></p><p>Hugo NexT 主题：
+<a href=https://github.com/hugo-next/hugo-theme-next title=hugo-next/hugo-theme-next(github.com) rel="noopener external nofollow noreferrer" target=_blank class=exturl>hugo-next/hugo-theme-next(github.com)
+<i class="fa fa-external-link-alt"></i></a></p></div><footer class=post-footer><div class=post-tags><a href=/tags/hugo>hugo</a></div><div class=addthis_inline_share_toolbox style=text-align:center></div><hr><div class=post-copyright><img src=/imgs/cc/cc.svg width=75 height=75 align=right alt=共享知识><ul><li class=post-copyright-title><strong>文章标题：</strong>
+Hugo 静态博客部署</li><li class=post-copyright-author><strong>本文作者： </strong>Mortal</li><li class=post-copyright-link><strong>本文链接：</strong>
+<a id=post-cr-link href=https://blog.jiefar.com/knowledge/hugo-static-blog-deployment/ title="Hugo 静态博客部署">https://blog.jiefar.com/knowledge/hugo-static-blog-deployment/</a></li><li class=post-copyright-license><strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <i class="fab fa-fw fa-creative-commons"></i><a target=_blank href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div><div class=post-nav><div class="post-nav-next post-nav-item"></div><div class="post-nav-prev post-nav-item"><a href=/knowledge/obsidian-multi-platform-synchronization/ rel=prev title="Obsidian 多平台同步">Obsidian 多平台同步
+<i class="fa fa-chevron-right"></i></a></div></div></footer></article></div><div id=comments class=post-comments><div class=comment-head><div class=comment-headline><i class="fas fa-comments fa-fw"></i>
+<span>评论交流</span></div></div><div class=comment-wrap><div><div class=comment-loading><i class="fa fa-sync fa-spin"></i></div><div class=waline-container></div></div></div></div></div></main><footer class=footer><div class=footer-inner><div class=copyright>&copy;
+<span itemprop=copyrightYear>2010 - 2024
+</span><span class=with-love><i class="fa fa-heart"></i>
+</span><span class=author itemprop=copyrightHolder>Mortal</span></div><div class=powered-by>由 <a href=https://gohugo.io title=0.134.0 target=_blank>Hugo</a> & <a href=https://github.com/hugo-next/hugo-theme-next title=4.6.3 target=_blank>Hugo NexT.Gemini</a> 强力驱动</div></div></footer><script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js crossorigin=anonymous defer></script><script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js crossorigin=anonymous defer></script><script class=next-config data-name=main type=application/json>{"bookmark":{"color":"#222","enable":true,"save":"manual"},"copybtn":true,"darkmode":false,"giscus":{"cfg":{"category":"Comments","categoryid":null,"emit":false,"inputposition":"top","mapping":"title","reactions":false,"repo":"username/repo-name","repoid":null,"theme":"preferred_color_scheme"},"js":"https://giscus.app/client.js"},"hostname":"https://blog.jiefar.com/","i18n":{"ds_day":" 天前","ds_days":" 天 ","ds_hour":" 小时前","ds_hours":" 小时 ","ds_just":"刚刚","ds_min":" 分钟前","ds_mins":" 分钟","ds_month":" 个月前","ds_years":" 年 ","empty":"没有找到任何搜索结果：${query}","hits":"找到 ${hits} 个搜索结果","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","placeholder":"搜索..."},"lang":"zh-CN","lawidget":{"id":"3J63OSfCg9mfPx0q","js":"https://v6-widget.51.la/v6/laId/quote.js?theme=0\u0026col=true\u0026f=12\u0026display=0,0,0,1,0,1,1,1"},"lazyload":false,"localSearch":{"enable":true,"limit":1e3,"path":"/searchindexes.xml","preload":false,"topnperarticle":-1,"trigger":"auto","unescape":false},"motion":{"async":true,"enable":true,"transition":{"collheader":"fadeInLeft","postblock":"fadeIn","postbody":"fadeInDown","postheader":"fadeInDown","sidebar":"fadeInUp"}},"postmeta":{"comments":{"enable":true,"plugin":"waline"},"views":{"enable":true,"plugin":"waline"}},"root":"/","scheme":"Gemini","sidebar":{"display":"post","offset":12,"padding":18,"position":"left","width":256},"vendor":{"plugins":"cdnjs","router":{"home":"https://cdnjs.com","logo":"https://cdnjs.com/_/f7a2ebfb819c118086546e481876aef6.svg","name":"cdnjs","type":"modern","url":"https://cdnjs.cloudflare.com/ajax/libs"}},"version":"4.6.3","waline":{"cfg":{"emoji":false,"imguploader":false,"placeholder":"请文明发言哟 ヾ(≧▽≦*)o","reaction":true,"reactiontext":["点赞","踩一下","得意","不屑","尴尬","睡觉"],"reactiontitle":"你认为这篇文章怎么样？","requiredmeta":["nick","mail"],"serverurl":"https://waline.jiefar.com/","sofa":"快来发表你的意见吧 (≧∀≦)ゞ","wordlimit":200},"css":{"alias":"@waline/client","file":"dist/waline.css","name":"waline","version":"2.15.8"},"js":{"alias":"@waline/client","file":"dist/waline.js","name":"waline","version":"2.15.8"}}}</script><script type=text/javascript src=/js/main.min.1273182944e2da1045e56e13ad651c02e95e410b9f5ed654d73ac00c82c24a92.js defer></script></body></html>
