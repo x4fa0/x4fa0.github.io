@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rhel on 生活与梦想</title><link>https://blog.jiefar.com/tags/rhel/</link><description>Recent content in Rhel on 生活与梦想</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Thu, 05 Sep 2024 11:22:30 +0800</lastBuildDate><atom:link href="https://blog.jiefar.com/tags/rhel/rss.xml" rel="self" type="application/rss+xml"/><item><title>SSH 安全连接</title><link>https://blog.jiefar.com/knowledge/linux/ssh-secure-connection/</link><pubDate>Fri, 13 Sep 2024 11:22:30 +0800</pubDate><guid>https://blog.jiefar.com/knowledge/linux/ssh-secure-connection/</guid><description>&lt;h2 id="i-环境准备">I. 环境准备
+&lt;a class="header-anchor" href="#i-%e7%8e%af%e5%a2%83%e5%87%86%e5%a4%87">&lt;/a>
+&lt;/h2>&lt;blockquote>
+&lt;p>[!info] 环境说明：&lt;br>
+本实践基于 AlmaLinux 8.x , 适用 AlmaLinux 9.x , OS 版本查看：&lt;code>cat /etc/redhat-release&lt;/code>&lt;/p>
+&lt;/blockquote></description></item></channel></rss>
