@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Editor on 生活与梦想</title><link>https://mortal.jiefar.com/categories/editor/</link><description>Recent content in Editor on 生活与梦想</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Fri, 13 Sep 2024 23:44:30 +0800</lastBuildDate><atom:link href="https://mortal.jiefar.com/categories/editor/rss.xml" rel="self" type="application/rss+xml"/><item><title>MarkDown 语法</title><link>https://mortal.jiefar.com/knowledge/editor/markdown-syntax/</link><pubDate>Fri, 13 Sep 2024 11:05:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/editor/markdown-syntax/</guid><description>&lt;h2 id="i-基本语法">I. 基本语法
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Markdown on 生活与梦想</title><link>https://mortal.jiefar.com/tags/markdown/</link><description>Recent content in Markdown on 生活与梦想</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Fri, 13 Sep 2024 23:41:30 +0800</lastBuildDate><atom:link href="https://mortal.jiefar.com/tags/markdown/rss.xml" rel="self" type="application/rss+xml"/><item><title>MarkDown 语法</title><link>https://mortal.jiefar.com/knowledge/editor/markdown-syntax/</link><pubDate>Fri, 13 Sep 2024 11:05:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/editor/markdown-syntax/</guid><description>&lt;h2 id="i-基本语法">I. 基本语法
 &lt;a class="header-anchor" href="#i-%e5%9f%ba%e6%9c%ac%e8%af%ad%e6%b3%95">&lt;/a>
 &lt;/h2>&lt;p>^12d18a&lt;/p>
 &lt;h3 id="11-文本样式">1.1 文本样式
@@ -56,23 +56,4 @@
  &lt;td style="text-align: left">这是&lt;sup>上标&lt;/sup>文本&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>Obsidian 配置</title><link>https://mortal.jiefar.com/knowledge/editor/obsidian-configuration/</link><pubDate>Fri, 13 Sep 2024 10:10:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/editor/obsidian-configuration/</guid><description>&lt;h2 id="i-基础配置">I. 基础配置
-&lt;a class="header-anchor" href="#i-%e5%9f%ba%e7%a1%80%e9%85%8d%e7%bd%ae">&lt;/a>
-&lt;/h2>&lt;h3 id="11-编辑器">1.1 编辑器
-&lt;a class="header-anchor" href="#11-%e7%bc%96%e8%be%91%e5%99%a8">&lt;/a>
-&lt;/h3>&lt;ul>
-&lt;li>新标签页的默认视图：阅读视图&lt;/li>
-&lt;li>默认编辑模式：源码模式&lt;/li>
-&lt;/ul>
-&lt;h3 id="12-文件与链接">1.2 文件与链接
-&lt;a class="header-anchor" href="#12-%e6%96%87%e4%bb%b6%e4%b8%8e%e9%93%be%e6%8e%a5">&lt;/a>
-&lt;/h3>&lt;ul>
-&lt;li>始终更新内部链接：启用✅&lt;/li>
-&lt;li>新建笔记存放位置：当前文件所在的文件夹&lt;/li>
-&lt;li>使用 Wiki 链接：禁用❎&lt;/li>
-&lt;/ul>
-&lt;h2 id="ii-插件">II. 插件
-&lt;a class="header-anchor" href="#ii-%e6%8f%92%e4%bb%b6">&lt;/a>
-&lt;/h2>&lt;h3 id="21-安装插件">2.1 安装插件
-&lt;a class="header-anchor" href="#21-%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6">&lt;/a>
-&lt;/h3>&lt;p>打开 Obsidian 选项 -&amp;gt; 第三方插件（关闭安全模式）-&amp;gt; 社区插件市场（浏览）-&amp;gt; &lt;code>插件名称&lt;/code> -&amp;gt; 安装&lt;/p></description></item></channel></rss>
+&lt;/table></description></item></channel></rss>

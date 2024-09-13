@@ -1,9 +1,86 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Knowledges on 生活与梦想</title><link>https://blog.jiefar.com/knowledge/</link><description>Recent content in Knowledges on 生活与梦想</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Thu, 05 Sep 2024 23:17:00 +0800</lastBuildDate><atom:link href="https://blog.jiefar.com/knowledge/rss.xml" rel="self" type="application/rss+xml"/><item><title>SSH 安全连接</title><link>https://blog.jiefar.com/knowledge/linux/ssh-secure-connection/</link><pubDate>Fri, 13 Sep 2024 11:22:30 +0800</pubDate><guid>https://blog.jiefar.com/knowledge/linux/ssh-secure-connection/</guid><description>&lt;h2 id="i-环境准备">I. 环境准备
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Knowledges on 生活与梦想</title><link>https://mortal.jiefar.com/knowledge/</link><description>Recent content in Knowledges on 生活与梦想</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Fri, 13 Sep 2024 23:44:30 +0800</lastBuildDate><atom:link href="https://mortal.jiefar.com/knowledge/rss.xml" rel="self" type="application/rss+xml"/><item><title>MarkDown 语法</title><link>https://mortal.jiefar.com/knowledge/editor/markdown-syntax/</link><pubDate>Fri, 13 Sep 2024 11:05:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/editor/markdown-syntax/</guid><description>&lt;h2 id="i-基本语法">I. 基本语法
+&lt;a class="header-anchor" href="#i-%e5%9f%ba%e6%9c%ac%e8%af%ad%e6%b3%95">&lt;/a>
+&lt;/h2>&lt;p>^12d18a&lt;/p>
+&lt;h3 id="11-文本样式">1.1 文本样式
+&lt;a class="header-anchor" href="#11-%e6%96%87%e6%9c%ac%e6%a0%b7%e5%bc%8f">&lt;/a>
+&lt;/h3>&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">style&lt;/th>
+ &lt;th style="text-align: left">语法&lt;/th>
+ &lt;th style="text-align: left">示例&lt;/th>
+ &lt;th style="text-align: left">输出&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">加粗&lt;/td>
+ &lt;td style="text-align: left">&lt;code>** **&lt;/code> 或 &lt;code>__ __&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;code>**这是粗体文本**&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>这是粗体文本&lt;/strong>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">斜体&lt;/td>
+ &lt;td style="text-align: left">&lt;code>* *&lt;/code> 或 &lt;code>_ _&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;code>*这是斜体文本*&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;em>这是斜体文本&lt;/em>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">删除线&lt;/td>
+ &lt;td style="text-align: left">&lt;code>~~ ~~&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;code>~~这是错误文本~~&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;del>这是错误文本&lt;/del>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">粗体和嵌入的斜体&lt;/td>
+ &lt;td style="text-align: left">&lt;code>** **&lt;/code> 和 &lt;code>_ _&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;code>**粗体嵌入_斜体_的文本**&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;strong>粗体嵌入_斜体_的文本&lt;/strong>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">全部粗体和斜体&lt;/td>
+ &lt;td style="text-align: left">&lt;code>*** ***&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;code>***全部粗体和斜体***&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;em>&lt;strong>全部粗体和斜体&lt;/strong>&lt;/em>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">下标&lt;/td>
+ &lt;td style="text-align: left">&lt;code>&amp;lt;sub&amp;gt; &amp;lt;/sub&amp;gt;&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;code>这是&amp;lt;sub&amp;gt;下标&amp;lt;/sub&amp;gt;文本&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">这是&lt;sub>下标&lt;/sub>文本&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">上标&lt;/td>
+ &lt;td style="text-align: left">&lt;code>&amp;lt;sup&amp;gt; &amp;lt;/sup&amp;gt;&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">&lt;code>这是&amp;lt;sup&amp;gt;上标&amp;lt;/sup&amp;gt;文本&lt;/code>&lt;/td>
+ &lt;td style="text-align: left">这是&lt;sup>上标&lt;/sup>文本&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>Obsidian 配置</title><link>https://mortal.jiefar.com/knowledge/editor/obsidian-configuration/</link><pubDate>Fri, 13 Sep 2024 10:10:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/editor/obsidian-configuration/</guid><description>&lt;h2 id="i-基础配置">I. 基础配置
+&lt;a class="header-anchor" href="#i-%e5%9f%ba%e7%a1%80%e9%85%8d%e7%bd%ae">&lt;/a>
+&lt;/h2>&lt;h3 id="11-编辑器">1.1 编辑器
+&lt;a class="header-anchor" href="#11-%e7%bc%96%e8%be%91%e5%99%a8">&lt;/a>
+&lt;/h3>&lt;ul>
+&lt;li>新标签页的默认视图：阅读视图&lt;/li>
+&lt;li>默认编辑模式：源码模式&lt;/li>
+&lt;/ul>
+&lt;h3 id="12-文件与链接">1.2 文件与链接
+&lt;a class="header-anchor" href="#12-%e6%96%87%e4%bb%b6%e4%b8%8e%e9%93%be%e6%8e%a5">&lt;/a>
+&lt;/h3>&lt;ul>
+&lt;li>始终更新内部链接：启用✅&lt;/li>
+&lt;li>新建笔记存放位置：当前文件所在的文件夹&lt;/li>
+&lt;li>使用 Wiki 链接：禁用❎&lt;/li>
+&lt;/ul>
+&lt;h2 id="ii-插件">II. 插件
+&lt;a class="header-anchor" href="#ii-%e6%8f%92%e4%bb%b6">&lt;/a>
+&lt;/h2>&lt;h3 id="21-安装插件">2.1 安装插件
+&lt;a class="header-anchor" href="#21-%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6">&lt;/a>
+&lt;/h3>&lt;p>打开 Obsidian 选项 -&amp;gt; 第三方插件（关闭安全模式）-&amp;gt; 社区插件市场（浏览）-&amp;gt; &lt;code>插件名称&lt;/code> -&amp;gt; 安装&lt;/p></description></item><item><title>SSH 安全连接</title><link>https://mortal.jiefar.com/knowledge/linux/ssh-secure-connection/</link><pubDate>Tue, 10 Sep 2024 11:22:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/linux/ssh-secure-connection/</guid><description>&lt;h2 id="i-环境准备">I. 环境准备
 &lt;a class="header-anchor" href="#i-%e7%8e%af%e5%a2%83%e5%87%86%e5%a4%87">&lt;/a>
 &lt;/h2>&lt;blockquote>
-&lt;p>[!info] 环境说明：&lt;br>
+&lt;p>📌 环境说明：&lt;br>
 本实践基于 AlmaLinux 8.x , 适用 AlmaLinux 9.x , OS 版本查看：&lt;code>cat /etc/redhat-release&lt;/code>&lt;/p>
-&lt;/blockquote></description></item><item><title>Hugo 静态博客部署</title><link>https://blog.jiefar.com/knowledge/blog/hugo-static-blog-deployment/</link><pubDate>Fri, 21 Jun 2024 17:17:00 +0800</pubDate><guid>https://blog.jiefar.com/knowledge/blog/hugo-static-blog-deployment/</guid><description>&lt;h2 id="i-前提条件">I. 前提条件
+&lt;/blockquote></description></item><item><title>Hugo 静态博客部署</title><link>https://mortal.jiefar.com/knowledge/blog/hugo-static-blog-deployment/</link><pubDate>Fri, 21 Jun 2024 17:17:00 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/blog/hugo-static-blog-deployment/</guid><description>&lt;h2 id="i-前提条件">I. 前提条件
 &lt;a class="header-anchor" href="#i-%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">&lt;/a>
 &lt;/h2>&lt;h3 id="11-安装-hugo">1.1 安装 Hugo
 &lt;a class="header-anchor" href="#11-%e5%ae%89%e8%a3%85-hugo">&lt;/a>
@@ -16,17 +93,4 @@
  &lt;i class="fa fa-external-link-alt">&lt;/i>
  
 &lt;/a>&lt;/p>
-&lt;p>2.解压下载的压缩包，将 &lt;code>hugo.exe&lt;/code> 复制到 &lt;code>%SystemRoot%\System32&lt;/code> 目录。&lt;/p></description></item><item><title>Obsidian 多平台同步</title><link>https://blog.jiefar.com/knowledge/editor/obsidian-multi-platform-synchronization/</link><pubDate>Tue, 18 Jun 2024 09:30:00 +0800</pubDate><guid>https://blog.jiefar.com/knowledge/editor/obsidian-multi-platform-synchronization/</guid><description>&lt;h2 id="i-obsidian-安装">I. Obsidian 安装
-&lt;a class="header-anchor" href="#i-obsidian-%e5%ae%89%e8%a3%85">&lt;/a>
-&lt;/h2>&lt;h3 id="11-下载安装">1.1 下载安装
-&lt;a class="header-anchor" href="#11-%e4%b8%8b%e8%bd%bd%e5%ae%89%e8%a3%85">&lt;/a>
-&lt;/h3>&lt;p>Official Website: 
-&lt;a href="https://obsidian.md/" title="Obsidian" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
- Obsidian
- 
- &lt;i class="fa fa-external-link-alt">&lt;/i>
- 
-&lt;/a>&lt;/p>
-&lt;h3 id="12-创建仓库">1.2 创建仓库
-&lt;a class="header-anchor" href="#12-%e5%88%9b%e5%bb%ba%e4%bb%93%e5%ba%93">&lt;/a>
-&lt;/h3>&lt;p>📢注意：该操作会在指定“仓库位置”下创建一个以“仓库名称”为命名的本地目录。&lt;/p></description></item></channel></rss>
+&lt;p>2.解压下载的压缩包，将 &lt;code>hugo.exe&lt;/code> 复制到 &lt;code>%SystemRoot%\System32&lt;/code> 目录。&lt;/p></description></item></channel></rss>

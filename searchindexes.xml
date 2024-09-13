@@ -1,26 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>SSH 安全连接</title><url>/knowledge/linux/ssh-secure-connection/</url><categories><category>linux</category></categories><tags><tag>rhel</tag></tags><content type="html">  I. 环境准备 [!info] 环境说明：
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>MarkDown 语法</title><url>/knowledge/editor/markdown-syntax/</url><categories><category>editor</category></categories><tags><tag>markdown</tag></tags><content type="html"><![CDATA[  I. 基本语法 ^12d18a
+1.1 文本样式 style 语法 示例 输出 加粗 ** ** 或 __ __ **这是粗体文本** 这是粗体文本 斜体 * * 或 _ _ *这是斜体文本* 这是斜体文本 删除线 ~~ ~~ ~~这是错误文本~~ 这是错误文本 粗体和嵌入的斜体 ** ** 和 _ _ **粗体嵌入_斜体_的文本** 粗体嵌入_斜体_的文本 全部粗体和斜体 *** *** ***全部粗体和斜体*** 全部粗体和斜体 下标 &amp;lt;sub&amp;gt; &amp;lt;/sub&amp;gt; 这是&amp;lt;sub&amp;gt;下标&amp;lt;/sub&amp;gt;文本 这是下标文本 上标 &amp;lt;sup&amp;gt; &amp;lt;/sup&amp;gt; 这是&amp;lt;sup&amp;gt;上标&amp;lt;/sup&amp;gt;文本 这是上标文本 1.2 引用文本 可以使用 &amp;gt; 来引用文本。
+&amp;gt; Text that is a quote 预览效果👇
+Text that is a quote
+1.3 引用代码 1.3.1 代码片段 Use `git status` to list all new or modified files that haven&amp;#39;t yet been committed. 预览效果👇
+Use git status to list all new or modified files that haven&amp;rsquo;t yet been committed.
+1.3.2 代码块 将在代码块之前和之后的行上使用三个反引号👇
+Some basic Git commands are: ``` git status git add git commit ``` 1.3.3 隔离代码块 要在围栏代码块中显示三重倒引号，请将其包在四个倒引号内。
+``` Look! You can see my backticks. ``` 1.4 链接 This site was built using [GitHub Pages](https://pages.github.com/). 效果预览👇
+This site was built using GitHub Pages .
+1.5 图像 ![Screenshot of a comment on a GitHub issue showing an …  ]]></content></entry><entry><title>Obsidian 配置</title><url>/knowledge/editor/obsidian-configuration/</url><categories><category>editor</category></categories><tags><tag>obsidian</tag></tags><content type="html"><![CDATA[  I. 基础配置 1.1 编辑器 新标签页的默认视图：阅读视图 默认编辑模式：源码模式 1.2 文件与链接 始终更新内部链接：启用✅ 新建笔记存放位置：当前文件所在的文件夹 使用 Wiki 链接：禁用❎ II. 插件 2.1 安装插件 打开 Obsidian 选项 -&gt; 第三方插件（关闭安全模式）-&gt; 社区插件市场（浏览）-&gt; 插件名称 -&gt; 安装
+2.2 Remotely Save 2.2.1 Remotely Save 启用 在第三方插件 -&gt; 已安装插件中启用 Remotely Save
+2.2.2 Remotely Save 配置 1、&ldquo;Remotely Save&quot;选项 -&gt; 选择远程服务（选择其中一项）：
+OneDrive(个人版) -&gt; 鉴权（按提示授予权限）-&gt; 检查可否连接 S3 或兼容 S3 的服务 -&gt; 填写相关 API 信息 2、基本设置：
+自动运行：每 5 分钟 启动后自动运行一次：启动后第 1 秒运行一次 保存时同步：关闭 跳过大文件：20MB 在状态栏显示上一次成功同步：开启 3、进阶设置：
+如果修改超过百分比则中止同步：100（去除此保护） 2.3 Advanced Tables 2.3.1 使用方法 1、输入 | ;
+2、输入列标题，然后按 Tab 键；
+3、重复第二步，直到所有标题输入完毕，然后按 回车 键；
+4、此时光标来到表格的第一行；
+5、输入列的内容，然后按 Tab 键；
+6、重复第五步，直到所有列的内容输入完毕，如果需要增加新行，按 回车 键；
+III. 主题 3.1 安装主题 1、打开 Obsidian ，进入设置 (Settings)。
+2、单击 “外观 ”选项卡。
+3、点击管理按钮打开社区商店。
+4、在 &ldquo;筛选器&hellip; 搜索框中搜索 主题名称。
+5、点击 “安装并使用 ”按钮。
+3.2 Maple 3.2.1 Maple 配置 无
+3.2.2 Style Settings 1、安装插件：Style Settings
+2、安装完成后启用。
+  ]]></content></entry><entry><title>SSH 安全连接</title><url>/knowledge/linux/ssh-secure-connection/</url><categories><category>linux</category></categories><tags><tag>rhel</tag></tags><content type="html">  I. 环境准备 📌 环境说明：
 本实践基于 AlmaLinux 8.x , 适用 AlmaLinux 9.x , OS 版本查看：cat /etc/redhat-release
-1.1 更改 SELinux 模式 [!danger] 警告： 禁用 SELinux 会降低您的系统安全性。如果您的场景需要在生产环境中执行调试，请临时使用 permissive 模式，而不是永久禁用 SELinux。如需有关 permissive 模式的更多信息，请参考 更改 SELinux 状态和模式 。
+1.1 更改 SELinux 模式 ⚠️ 警告： 禁用 SELinux 会降低您的系统安全性。如果您的场景需要在生产环境中执行调试，请临时使用 permissive 模式，而不是永久禁用 SELinux。如需有关 permissive 模式的更多信息，请参考 更改 SELinux 状态和模式 。
 1、在您选择的文本编辑器中打开 /etc/selinux/config 文件，例如：
 vi /etc/selinux/config 2、配置 SELINUX=permissive 选项：
 # This file controls the state of SELinux on the system. # SELINUX= can take one of these three values: # enforcing - SELinux security policy is enforced. # permissive - SELinux prints warnings instead of enforcing. # disabled - No SELinux policy is loaded. SELINUX=permissive # SELINUXTYPE= can take one of these two values: # targeted - Targeted processes are protected, # mls - Multi Level Security protection. SELINUXTYPE=targeted 3、重启系统
 reboot 4、验证
 getenforce 1.2 启用防火墙 1、查看防火墙状态
 firewall-cmd --state 2、如果未启用，使用以下命令启动 Firewalld：
-systemctl enable firewalld --now 更多用法参考： RHEL 防火墙快速配置 1.3 配置服务器静态 IP [!info]- 操作说明：
-Red Hat Enterprise Linux 为管理员提供不同的选项来 …  </content></entry><entry><title>Hugo 静态博客部署</title><url>/knowledge/blog/hugo-static-blog-deployment/</url><categories><category>blog</category></categories><tags><tag>hugo</tag></tags><content type="html">  I. 前提条件 1.1 安装 Hugo 1.1.1 Windows 1.Hugo 下载（建议下载扩展版）： Hugo(github.com) 2.解压下载的压缩包，将 hugo.exe 复制到 %SystemRoot%\System32 目录。
+systemctl enable firewalld --now 更多用法参考： RHEL 防火墙快速配置 1.3 配置服务器静态 IP 📌 操作说明：
+Red Hat Enterprise Linux 为管理员提供不同的选项来配置以太网连接。 …  </content></entry><entry><title>Hugo 静态博客部署</title><url>/knowledge/blog/hugo-static-blog-deployment/</url><categories><category>blog</category></categories><tags><tag>hugo</tag></tags><content type="html">  I. 前提条件 1.1 安装 Hugo 1.1.1 Windows 1.Hugo 下载（建议下载扩展版）： Hugo(github.com) 2.解压下载的压缩包，将 hugo.exe 复制到 %SystemRoot%\System32 目录。
 1.1.2 MacOS brew install hugo 1.1.3 Linux 官方文档： Linux | Hugo (gohugo.io) 1.2 安装 Git Git - Installing Git (git-scm.com) II. 创建站点 2.1 安装确认 确认已安装 Hugo v0.112.0 或更高版本，在 Git Bash 下执行以下命令：
 hugo version 2.2 创建站点 在本地选择合适的站点存放路径。 在 Git Bash 中执行以下命令为站点创建 目录结构 ： hugo new site blog 2.3 创建源码仓库 登录 GitHub 仪表板。 创建仓库并命名，如：blog ⨀ Private（设置为私有仓库） 2.4 关联源码仓库 cd blog git init -b main git remote add origin git@github.com:user/repo.git git pull --rebase origin main git add . git commit -m &amp;amp;#34;Initial commit&amp;amp;#34; git branch -M main git push -u origin main 2.5 主题配置 2.5.1 主题下载 可从 Hugo Themes 官方，或根据 awesome-hugo-themes 的 GitHub Stars 数量排行下载自己喜欢的主题，本教程使用 Hugo NexT 主题“双子座 (Gemini)”页面。
-cd blog mv hugo.toml hugo.toml.bak git submodule add https://github.com/hugo-next/hugo-theme-next.git themes/hugo-theme-next git submodule update --init --recursive cp …  </content></entry><entry><title>Obsidian 多平台同步</title><url>/knowledge/editor/obsidian-multi-platform-synchronization/</url><categories><category>Editor</category></categories><tags><tag>obsidian</tag></tags><content type="html"><![CDATA[  I. Obsidian 安装 1.1 下载安装 Official Website: Obsidian 1.2 创建仓库 📢注意：该操作会在指定“仓库位置”下创建一个以“仓库名称”为命名的本地目录。
-II. 插件安装 2.1 Remotely Save 2.1.1 Remotely Save 安装 打开 Obsidian 选项 -&gt; 第三方插件（关闭安全模式）-&gt; 社区插件市场（浏览）-&gt; Remotely Save -&gt; 安装
-2.1.2 Remotely Save 配置 2.1.2.1 Remotely Save 启用
-在第三方插件 -&gt; 已安装插件中启用 Remotely Save
-2.1.2.2 Remotely Save 配置
-&ldquo;Remotely Save&quot;选项 -&gt; 选择远程服务（选择其中一项）：
-OneDrive(个人版) -&gt; 鉴权（按提示授予权限）-&gt; 检查可否连接 S3 或兼容 S3 的服务 -&gt; 填写相关 API 信息 基本设置：
-自动运行：每 5 分钟 启动后自动运行一次：启动后第 1 秒运行一次 保存时同步：关闭 跳过大文件：20MB 在状态栏显示上一次成功同步：开启 进阶设置：
-如果修改超过百分比则中止同步：100（去除此保护） III. 移动端同步 参考本教程 II. 插件安装，操作基本相同。
-  ]]></content></entry><entry><title>关于 Hugo NexT 组织</title><url>/about.html</url><categories/><tags/><content type="html">  Hugo NexT 组织是由众多喜爱 NexT 主题及风格的世界各地友人共同组建而成，为的就是让这个主题继续在 Hugo 引擎中也能得到发扬光大，在此也欢迎你的加入！
+cd blog mv hugo.toml hugo.toml.bak git submodule add https://github.com/hugo-next/hugo-theme-next.git themes/hugo-theme-next git submodule update --init --recursive cp …  </content></entry><entry><title>关于 Hugo NexT 组织</title><url>/about.html</url><categories/><tags/><content type="html">  Hugo NexT 组织是由众多喜爱 NexT 主题及风格的世界各地友人共同组建而成，为的就是让这个主题继续在 Hugo 引擎中也能得到发扬光大，在此也欢迎你的加入！
 我们的愿景 延续 NexT 经典的黑白调搭配，保持简单的易用性及强大的功能。
 使用反馈 加入 GitHub Discussions 或 Gitter 在线讨论 &amp;#x1f37b; GitHub Issues 提交错误报告 &amp;#x1f41b; GitHub Feature 表新功能的想法 &amp;#x2728; 同时国内用户也可加入 QQ 群交流： 604710815
   </content></entry><entry><title>站点示例</title><url>/flinks.html</url><categories/><tags/><content type="html">  如想交换本站友情链接，请在评论区留下你的站点信息，格式参考如下：

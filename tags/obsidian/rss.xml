@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Obsidian on 生活与梦想</title><link>https://blog.jiefar.com/tags/obsidian/</link><description>Recent content in Obsidian on 生活与梦想</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Thu, 05 Sep 2024 23:17:00 +0800</lastBuildDate><atom:link href="https://blog.jiefar.com/tags/obsidian/rss.xml" rel="self" type="application/rss+xml"/><item><title>Obsidian 多平台同步</title><link>https://blog.jiefar.com/knowledge/editor/obsidian-multi-platform-synchronization/</link><pubDate>Tue, 18 Jun 2024 09:30:00 +0800</pubDate><guid>https://blog.jiefar.com/knowledge/editor/obsidian-multi-platform-synchronization/</guid><description>&lt;h2 id="i-obsidian-安装">I. Obsidian 安装
-&lt;a class="header-anchor" href="#i-obsidian-%e5%ae%89%e8%a3%85">&lt;/a>
-&lt;/h2>&lt;h3 id="11-下载安装">1.1 下载安装
-&lt;a class="header-anchor" href="#11-%e4%b8%8b%e8%bd%bd%e5%ae%89%e8%a3%85">&lt;/a>
-&lt;/h3>&lt;p>Official Website: 
-&lt;a href="https://obsidian.md/" title="Obsidian" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
- Obsidian
- 
- &lt;i class="fa fa-external-link-alt">&lt;/i>
- 
-&lt;/a>&lt;/p>
-&lt;h3 id="12-创建仓库">1.2 创建仓库
-&lt;a class="header-anchor" href="#12-%e5%88%9b%e5%bb%ba%e4%bb%93%e5%ba%93">&lt;/a>
-&lt;/h3>&lt;p>📢注意：该操作会在指定“仓库位置”下创建一个以“仓库名称”为命名的本地目录。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Obsidian on 生活与梦想</title><link>https://mortal.jiefar.com/tags/obsidian/</link><description>Recent content in Obsidian on 生活与梦想</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Fri, 13 Sep 2024 23:44:30 +0800</lastBuildDate><atom:link href="https://mortal.jiefar.com/tags/obsidian/rss.xml" rel="self" type="application/rss+xml"/><item><title>Obsidian 配置</title><link>https://mortal.jiefar.com/knowledge/editor/obsidian-configuration/</link><pubDate>Fri, 13 Sep 2024 10:10:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/editor/obsidian-configuration/</guid><description>&lt;h2 id="i-基础配置">I. 基础配置
+&lt;a class="header-anchor" href="#i-%e5%9f%ba%e7%a1%80%e9%85%8d%e7%bd%ae">&lt;/a>
+&lt;/h2>&lt;h3 id="11-编辑器">1.1 编辑器
+&lt;a class="header-anchor" href="#11-%e7%bc%96%e8%be%91%e5%99%a8">&lt;/a>
+&lt;/h3>&lt;ul>
+&lt;li>新标签页的默认视图：阅读视图&lt;/li>
+&lt;li>默认编辑模式：源码模式&lt;/li>
+&lt;/ul>
+&lt;h3 id="12-文件与链接">1.2 文件与链接
+&lt;a class="header-anchor" href="#12-%e6%96%87%e4%bb%b6%e4%b8%8e%e9%93%be%e6%8e%a5">&lt;/a>
+&lt;/h3>&lt;ul>
+&lt;li>始终更新内部链接：启用✅&lt;/li>
+&lt;li>新建笔记存放位置：当前文件所在的文件夹&lt;/li>
+&lt;li>使用 Wiki 链接：禁用❎&lt;/li>
+&lt;/ul>
+&lt;h2 id="ii-插件">II. 插件
+&lt;a class="header-anchor" href="#ii-%e6%8f%92%e4%bb%b6">&lt;/a>
+&lt;/h2>&lt;h3 id="21-安装插件">2.1 安装插件
+&lt;a class="header-anchor" href="#21-%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6">&lt;/a>
+&lt;/h3>&lt;p>打开 Obsidian 选项 -&amp;gt; 第三方插件（关闭安全模式）-&amp;gt; 社区插件市场（浏览）-&amp;gt; &lt;code>插件名称&lt;/code> -&amp;gt; 安装&lt;/p></description></item></channel></rss>
