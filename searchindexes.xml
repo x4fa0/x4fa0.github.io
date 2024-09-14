@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>MarkDown 语法</title><url>/knowledge/editor/markdown-syntax/</url><categories><category>editor</category></categories><tags><tag>markdown</tag></tags><content type="html"><![CDATA[  I. 基本语法 1.1 文本样式 style 语法 示例 输出 加粗 ** ** 或 __ __ **这是粗体文本** 这是粗体文本 斜体 * * 或 _ _ *这是斜体文本* 这是斜体文本 删除线 ~~ ~~ ~~这是错误文本~~ 这是错误文本 粗体和嵌入的斜体 ** ** 和 _ _ **粗体嵌入_斜体_的文本** 粗体嵌入_斜体_的文本 全部粗体和斜体 *** *** ***全部粗体和斜体*** 全部粗体和斜体 下标 &amp;lt;sub&amp;gt; &amp;lt;/sub&amp;gt; 这是&amp;lt;sub&amp;gt;下标&amp;lt;/sub&amp;gt;文本 这是下标文本 上标 &amp;lt;sup&amp;gt; &amp;lt;/sup&amp;gt; 这是&amp;lt;sup&amp;gt;上标&amp;lt;/sup&amp;gt;文本 这是上标文本 1.2 引用文本 可以使用 &amp;gt; 来引用文本。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>RHEL8 初始化</title><url>/knowledge/linux/rhel8-initialization/</url><categories><category>linux</category></categories><tags><tag>rhel</tag></tags><content type="html"><![CDATA[  I. 连接服务器 1.1 服务器安全连接 SSH 安全连接 1.2 网络配置扩展 1.2.1 NetworkManager 1、在用户层面上，网络配置由 NetworkManager 管理。 该工具作为服务运行，你可以使用以下命令检查它的状态：
+systemctl status NetworkManager 2、NetworkManager 将从以下位置读取配置： /etc/sysconfig/network-scripts/ifcfg-&amp;lt;IFACE_NAME&amp;gt; ，每个网络接口都有自己的配置文件。 以下是服务器默认的配置示例：
+TYPE=Ethernet PROXY_METHOD=none BROWSER_ONLY=no BOOTPROTO=none #动态为:dhcp 静态为:none或static DEFROUTE=yes IPV4_FAILURE_FATAL=no IPV6INIT=no NAME=enp1s0 UUID=74c5ccee-c1f4-4f45-883f-fc4f765a8477 DEVICE=enp1s0 ONBOOT=yes #启动连接 IPADDR=192.168.1.16 #设置IP地址 PREFIX=24 #设置子网掩码或NETMASK=255.255.255.0 GATEWAY=192.168.1.1 #设置网关 DNS1=114.114.114.114 #设置主DNS DNS2=223.5.5.5 #设置备DNS IPV6_DISABLED=yes 📌 参数说明： 如果你想配置系统使用动态 IP 地址方案，你需要将 BOOTPROTO 参数的值从 none 更改为 dhcp ，并删除 IPADDR 、PREFIX 和 GATEWAY 行。
+BOOTPROTO：值为 none 或 static，表示静态 IP 地址；dhcp 表示动态 IP 地址。 IPADDR：需要分配的 IP 地址 PREFIX：子网掩码使用 CIDR 表示法 GATEWAY：默认网关 ONBOOT：参数设置为 yes 表示此连接将在启动时被激活。 1.2.2 配置静态路由 1、查看连接列表
+nmcli con show 若连接名有空格，如：System ens3 ，使用名称时使用单引号 &amp;lsquo;System ens3&amp;rsquo;，或修改网络连 …  ]]></content></entry><entry><title>Firewalld 快速配置</title><url>/knowledge/linux/firewalld-quick-configuration/</url><categories><category>linux</category></categories><tags><tag>firewalld</tag></tags><content type="html">  I. 启用防火墙 1.1 检查 Firewalld 是否已安装 1、通常，firewalld 会默认安装在系统上。如果不确定，可以运行以下命令检查：
+sudo systemctl status firewalld 2、如果 firewalld 未安装，可以通过以下命令进行安装：
+sudo dnf install firewalld 1.2 启用并启动 Firewalld sudo systemctl enable firewalld --now 1.3 查看防火墙状态 firewall-cmd --state 如果返回 running，则表示防火墙已成功启动并在运行。
+II. 设置防火墙规则 2.1 检索当前活动区域 sudo firewall-cmd --get-active-zones 2.2 开放服务 添加应允许的服务，请使用 &amp;ndash;add-service 标志。如添加 https 服务，并允许传入 TCP 流量到 port 443：
+sudo firewall-cmd --permanent --zone=public --add-service=https 删除已允许的服务：
+sudo firewall-cmd --permanent --zone=public --remove-service=https 查看已永久允许的服务
+sudo firewall-cmd --permanent --list-services 查看可以按名称启用的其他服务，请键入：
+firewall-cmd --get-services 2.3 开放端口 永久开放 443/TCP 端口，临时开放不加 &amp;ndash;permanent 参数（开放 https 服务后不用再开放 443 端口）
+sudo firewall-cmd --permanent --zone=public --add-port=443/tcp 删除已开放的端口
+sudo firewall-cmd --permanent --zone=public --remove-port=443/tcp 查看已永久开放的端口
+sudo firewall-cmd --permanent --list-ports 2.4 更新防火墙规则 sudo firewall-cmd --reload 2.5 列出已经允许的服务 sudo firewall-cmd --permanent --list-all 📌 参数说明：
+&amp;ndash;permanent 列出永久允许的服务 III. 常见问题 3.1 RHEL 8 防火墙相关问题 REHL8 防火墙相关问题 IV. 参考文档 Red Hat Enterprise Linux 9： 配置防火墙和数据包过滤器 Linux-Command： firewall-cmd 命令   </content></entry><entry><title>更改 SELinux 状态和模式</title><url>/knowledge/linux/changing-the-selinux-state-and-mode/</url><categories><category>linux</category></categories><tags><tag>rhel</tag></tags><content type="html">  I. 临时禁用 SELinux 1.1 显示当前 SELinux 模式 getenforce SELinux 状态以及正在使用的 SELinux 策略：
+sestatus 1.2 临时禁用 SELinux 使用 setenforce 实用程序在 enforcing 模式和 permissive 模式之间切换。使用 setenforce 所做的更改在重新引导后不会保留。要更改为 permissive 模式，请输入 setenforce 0 命令。
+setenforce 0 要更改为 enforcing 模式，请以 Linux root 用户身份输入 setenforce 1 命令。
+setenforce 1 使用 getenforce 实用程序查看当前的 SELinux 模式：
+getenforce II. 切换到 permissive 模式 ^28e792
+使用以下步骤将 SELinux 模式永久改为 permissive。当 SELinux 是以 permissive 模式运行时，不会强制 SELinux 策略。系统可保持正常操作，SELinux 不会拒绝任何操作，而只是记录 AVC 信息，它们可用于故障排除、调试和 SELinux 策略改进。每个 AVC 在这个示例中仅记录一次。
+2.1 先决条件 selinux-policy-targeted、libselinux-utils 和 policycoreutils 软件包已安装在您的系统中。 未使用 selinux=0 或 enforcing=0 内核参数。 2.2 步骤 1、在您选择的文本编辑器中打开 /etc/selinux/config 文件，例如：
+vi /etc/selinux/config 2、配置 SELINUX=permissive 选项：
+# This file controls the state of SELinux on the system. # SELINUX= can take one of these three values: # enforcing - SELinux security policy is enforced. # permissive - SELinux prints warnings instead of enforcing. # disabled - No SELinux policy is loaded. SELINUX=permissive # SELINUXTYPE= can take one of these two values: # targeted - Targeted processes are protected, # mls - Multi Level Security protection. SELINUXTYPE=targeted 配置 SELINUX 值为👇
+permissive 3、确保在下次 SELinux 重启时重新标记文件
+fixfiles -F onboot 4、重启系统
+reboot 2.3 验证 系统重启后，确认 getenforce 命令返回 Permissive：
+getenforce III. 永久禁用 SELinux ⚠️ 警告：
+禁用 SELinux 会降低您的系统安全性。避免使用 /etc/selinux/config 文件中的 SELINUX=disabled 选项来禁用 SELinux，因为这可能导致内存泄漏和竞争条件导致内核 panic。反之，应通过在内核命令行中添加 selinux=0 参数来禁用 SELinux。
+禁用 SELinux 时，SELinux 策略不被加载 ; 它不会被强制执行，也不会记录 AVC 信息。
+⚠️ 重要：
+红帽强烈建议您使用 permissive 模式，而不是永久禁用 SELinux。如需有关 permissive 模式的更多信息，请参阅 切换为 permissive 模式 。
+3.1 先决条件 已安装 grubby 软件包：
+rpm -q grubby 3.2 步骤 将您的引导装载程序配置为在内核命令行中添加 selinux=0 ： sudo grubby --update-kernel ALL --args selinux=0 重启您的系统： reboot 3.3 验证 重新引导后，确认 getenforce 命令返回 Disabled ：
+getenforce IV. 参考文档 Red Hat Enterprise Linux 9： 使用 SELinux   </content></entry><entry><title>Chrony 配置时间同步</title><url>/knowledge/linux/chrony-configuration-time-synchronization/</url><categories><category>linux</category></categories><tags><tag>chrony</tag></tags><content type="html">  I. 时区 1.1 时区概念 📌 GMT、UTC、CST、DST
+1、GMT (Greenwich Mean Time)
+格林尼治标准时间，基于英国伦敦郊区格林尼治天文台的平均太阳时间，是世界协调时间的基础。GMT没有夏令时（DST）的调整，在航海、航空等领域广泛使用。
+2、UTC (Coordinated Universal Time)
+协调世界时，是目前全球使用的主要时间标准，几乎取代了 GMT。UTC 与 GMT 基本相同，但 UTC 更为精确，因为它结合了原子钟时间（TAI）和地球自转时间（UT1）。UTC 也不会因夏令时而调整。
+3、CST (China Standard Time)
+中国标准时间，也是北京时间（BJT），UTC+8，指的是中国大陆、香港、澳门、台湾所使用的标准时间。CST 也可以指 Central Standard Time（中部标准时间），通常用于北美洲，在标准时间下是 UTC-6。
+4、DST (Daylight Saving Time)
+夏令时，是一种在夏季调整时间的制度，通常将时钟拨快一小时，以充分利用自然光线。 DST 主要在夏季实施，在大部分实施地区，冬季时钟会拨回到标准时间。各国对夏令时的使用有不同的规定，某些地区全年不采用夏令时。
+1.2 时区设置 1、查看当前时区
+timedatectl ℹ️ 列出时区：
+timedatectl list-timezones
+2、设置时区:
+亚洲/上海 timedatectl set-timezone Asia/Shanghai ℹ️ 其它时区：
+亚洲/东京
+timedatectl set-timezone Asia/Tokyo 美国/洛杉矶
+timedatectl set-timezone America/Los_Angeles 美国/纽约
+timedatectl set-timezone America/New_York II. Chrony 2.1 chrony 介绍 chrony 包括 chronyd（一个在用户空间运行的守护进程）和 chronyc（可用来监控 chronyd 性能并在运行时更改各种操作参数的命令行程序）。
+chrony 守护进程（chronyd） 可以由命令行工具 chronyc 监控和控制。这个工具提供了一个命令提示，允许输入大量命令来查询 chronyd  …  </content></entry><entry><title>MarkDown 语法</title><url>/knowledge/editor/markdown-syntax/</url><categories><category>editor</category></categories><tags><tag>markdown</tag></tags><content type="html"><![CDATA[  I. 基本语法 1.1 文本样式 style 语法 示例 输出 加粗 ** ** 或 __ __ **这是粗体文本** 这是粗体文本 斜体 * * 或 _ _ *这是斜体文本* 这是斜体文本 删除线 ~~ ~~ ~~这是错误文本~~ 这是错误文本 粗体和嵌入的斜体 ** ** 和 _ _ **粗体嵌入_斜体_的文本** 粗体嵌入_斜体_的文本 全部粗体和斜体 *** *** ***全部粗体和斜体*** 全部粗体和斜体 下标 &amp;lt;sub&amp;gt; &amp;lt;/sub&amp;gt; 这是&amp;lt;sub&amp;gt;下标&amp;lt;/sub&amp;gt;文本 这是下标文本 上标 &amp;lt;sup&amp;gt; &amp;lt;/sup&amp;gt; 这是&amp;lt;sup&amp;gt;上标&amp;lt;/sup&amp;gt;文本 这是上标文本 1.2 引用文本 可以使用 &amp;gt; 来引用文本。
 &amp;gt; Text that is a quote 预览效果👇
 Text that is a quote
 1.3 引用代码 1.3.1 代码片段 Use `git status` to list all new or modified files that haven&amp;#39;t yet been committed. 预览效果👇
@@ -26,9 +78,10 @@ III. 主题 3.1 安装主题 1、打开 Obsidian ，进入设置 (Settings)。
 3.2 Maple 3.2.1 Maple 配置 无
 3.2.2 Style Settings 1、安装插件：Style Settings
 2、安装完成后启用。
-  ]]></content></entry><entry><title>SSH 安全连接</title><url>/knowledge/linux/ssh-secure-connection/</url><categories><category>linux</category></categories><tags><tag>rhel</tag></tags><content type="html">  I. 环境准备 📌 环境说明：
+  ]]></content></entry><entry><title>SSH 安全连接</title><url>/knowledge/linux/ssh-secure-connection/</url><categories><category>linux</category></categories><tags><tag>ssh</tag></tags><content type="html">  I. 环境准备 📌 环境说明：
 本实践基于 AlmaLinux 8.x , 适用 AlmaLinux 9.x , OS 版本查看：cat /etc/redhat-release
-1.1 更改 SELinux 模式 ⚠️ 警告： 禁用 SELinux 会降低您的系统安全性。如果您的场景需要在生产环境中执行调试，请临时使用 permissive 模式，而不是永久禁用 SELinux。如需有关 permissive 模式的更多信息，请参考 更改 SELinux 状态和模式 。
+1.1 更改 SELinux 模式 ⚠️ 警告：
+禁用 SELinux 会降低您的系统安全性。如果您的场景需要在生产环境中执行调试，请临时使用 permissive 模式，而不是永久禁用 SELinux。如需有关 permissive 模式的更多信息，请参考 更改 SELinux 状态和模式 。
 1、在您选择的文本编辑器中打开 /etc/selinux/config 文件，例如：
 vi /etc/selinux/config 2、配置 SELINUX=permissive 选项：
 # This file controls the state of SELinux on the system. # SELINUX= can take one of these three values: # enforcing - SELinux security policy is enforced. # permissive - SELinux prints warnings instead of enforcing. # disabled - No SELinux policy is loaded. SELINUX=permissive # SELINUXTYPE= can take one of these two values: # targeted - Targeted processes are protected, # mls - Multi Level Security protection. SELINUXTYPE=targeted 3、重启系统

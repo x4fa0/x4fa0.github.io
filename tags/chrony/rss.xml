@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Chrony on 生活与梦想</title><link>https://mortal.jiefar.com/tags/chrony/</link><description>Recent content in Chrony on 生活与梦想</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Sat, 14 Sep 2024 11:31:30 +0800</lastBuildDate><atom:link href="https://mortal.jiefar.com/tags/chrony/rss.xml" rel="self" type="application/rss+xml"/><item><title>Chrony 配置时间同步</title><link>https://mortal.jiefar.com/knowledge/linux/chrony-configuration-time-synchronization/</link><pubDate>Sat, 14 Sep 2024 11:30:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/linux/chrony-configuration-time-synchronization/</guid><description>&lt;h2 id="i-时区">I. 时区
+&lt;a class="header-anchor" href="#i-%e6%97%b6%e5%8c%ba">&lt;/a>
+&lt;/h2>&lt;h3 id="11-时区概念">1.1 时区概念
+&lt;a class="header-anchor" href="#11-%e6%97%b6%e5%8c%ba%e6%a6%82%e5%bf%b5">&lt;/a>
+&lt;/h3>&lt;blockquote>
+&lt;p>📌 GMT、UTC、CST、DST&lt;/p>
+&lt;p>1、GMT (Greenwich Mean Time)&lt;br>
+&lt;strong>格林尼治标准时间&lt;/strong>，基于英国伦敦郊区格林尼治天文台的平均太阳时间，是世界协调时间的基础。GMT没有夏令时（DST）的调整，在航海、航空等领域广泛使用。&lt;/p></description></item></channel></rss>
