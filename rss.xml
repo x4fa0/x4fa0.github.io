@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活与梦想</title><link>https://mortal.jiefar.com/</link><description>Recent content on 生活与梦想</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Fri, 13 Sep 2024 23:44:30 +0800</lastBuildDate><atom:link href="https://mortal.jiefar.com/rss.xml" rel="self" type="application/rss+xml"/><item><title>MarkDown 语法</title><link>https://mortal.jiefar.com/knowledge/editor/markdown-syntax/</link><pubDate>Fri, 13 Sep 2024 11:05:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/editor/markdown-syntax/</guid><description>&lt;h2 id="i-基本语法">I. 基本语法
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活与梦想</title><link>https://mortal.jiefar.com/</link><description>Recent content on 生活与梦想</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Sat, 14 Sep 2024 10:38:30 +0800</lastBuildDate><atom:link href="https://mortal.jiefar.com/rss.xml" rel="self" type="application/rss+xml"/><item><title>MarkDown 语法</title><link>https://mortal.jiefar.com/knowledge/editor/markdown-syntax/</link><pubDate>Fri, 13 Sep 2024 11:05:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/editor/markdown-syntax/</guid><description>&lt;h2 id="i-基本语法">I. 基本语法
 &lt;a class="header-anchor" href="#i-%e5%9f%ba%e6%9c%ac%e8%af%ad%e6%b3%95">&lt;/a>
-&lt;/h2>&lt;p>^12d18a&lt;/p>
-&lt;h3 id="11-文本样式">1.1 文本样式
+&lt;/h2>&lt;h3 id="11-文本样式">1.1 文本样式
 &lt;a class="header-anchor" href="#11-%e6%96%87%e6%9c%ac%e6%a0%b7%e5%bc%8f">&lt;/a>
 &lt;/h3>&lt;table>
  &lt;thead>
@@ -56,7 +55,10 @@
  &lt;td style="text-align: left">这是&lt;sup>上标&lt;/sup>文本&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>Obsidian 配置</title><link>https://mortal.jiefar.com/knowledge/editor/obsidian-configuration/</link><pubDate>Fri, 13 Sep 2024 10:10:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/editor/obsidian-configuration/</guid><description>&lt;h2 id="i-基础配置">I. 基础配置
+&lt;/table>
+&lt;h3 id="12-引用文本">1.2 引用文本
+&lt;a class="header-anchor" href="#12-%e5%bc%95%e7%94%a8%e6%96%87%e6%9c%ac">&lt;/a>
+&lt;/h3>&lt;p>可以使用 &lt;code>&amp;gt;&lt;/code> 来引用文本。&lt;/p></description></item><item><title>Obsidian 配置</title><link>https://mortal.jiefar.com/knowledge/editor/obsidian-configuration/</link><pubDate>Fri, 13 Sep 2024 10:10:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/editor/obsidian-configuration/</guid><description>&lt;h2 id="i-基础配置">I. 基础配置
 &lt;a class="header-anchor" href="#i-%e5%9f%ba%e7%a1%80%e9%85%8d%e7%bd%ae">&lt;/a>
 &lt;/h2>&lt;h3 id="11-编辑器">1.1 编辑器
 &lt;a class="header-anchor" href="#11-%e7%bc%96%e8%be%91%e5%99%a8">&lt;/a>
@@ -93,7 +95,19 @@
  &lt;i class="fa fa-external-link-alt">&lt;/i>
  
 &lt;/a>&lt;/p>
-&lt;p>2.解压下载的压缩包，将 &lt;code>hugo.exe&lt;/code> 复制到 &lt;code>%SystemRoot%\System32&lt;/code> 目录。&lt;/p></description></item><item><title>关于 Hugo NexT 组织</title><link>https://mortal.jiefar.com/about.html</link><pubDate>Thu, 09 Jun 2022 20:12:52 +0800</pubDate><guid>https://mortal.jiefar.com/about.html</guid><description>&lt;p>&lt;code>Hugo NexT&lt;/code> 组织是由众多喜爱 &lt;code>NexT&lt;/code> 主题及风格的世界各地友人共同组建而成，为的就是让这个主题继续在 &lt;code>Hugo&lt;/code> 引擎中也能得到发扬光大，在此也欢迎你的加入！&lt;/p>
+&lt;p>2.解压下载的压缩包，将 &lt;code>hugo.exe&lt;/code> 复制到 &lt;code>%SystemRoot%\System32&lt;/code> 目录。&lt;/p>
+&lt;h4 id="112-macos">1.1.2 MacOS
+&lt;a class="header-anchor" href="#112-macos">&lt;/a>
+&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>brew install hugo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="113-linux">1.1.3 Linux
+&lt;a class="header-anchor" href="#113-linux">&lt;/a>
+&lt;/h4>&lt;p>官方文档：
+&lt;a href="https://gohugo.io/installation/linux/#repository-packages" title="Linux | Hugo (gohugo.io)" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+ Linux | Hugo (gohugo.io)
+ 
+ &lt;i class="fa fa-external-link-alt">&lt;/i>
+ 
+&lt;/a>&lt;/p></description></item><item><title>关于 Hugo NexT 组织</title><link>https://mortal.jiefar.com/about.html</link><pubDate>Thu, 09 Jun 2022 20:12:52 +0800</pubDate><guid>https://mortal.jiefar.com/about.html</guid><description>&lt;p>&lt;code>Hugo NexT&lt;/code> 组织是由众多喜爱 &lt;code>NexT&lt;/code> 主题及风格的世界各地友人共同组建而成，为的就是让这个主题继续在 &lt;code>Hugo&lt;/code> 引擎中也能得到发扬光大，在此也欢迎你的加入！&lt;/p>
 &lt;h1 id="我们的愿景">我们的愿景
 &lt;a class="header-anchor" href="#%e6%88%91%e4%bb%ac%e7%9a%84%e6%84%bf%e6%99%af">&lt;/a>
 &lt;/h1>&lt;p>延续 &lt;code>NexT&lt;/code> 经典的黑白调搭配，保持简单的易用性及强大的功能。&lt;/p></description></item><item><title>站点示例</title><link>https://mortal.jiefar.com/flinks.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mortal.jiefar.com/flinks.html</guid><description>&lt;p>如想交换本站友情链接，请在评论区留下你的站点信息，格式参考如下：&lt;/p>
