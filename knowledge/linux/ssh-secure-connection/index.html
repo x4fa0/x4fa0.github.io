@@ -11,7 +11,16 @@
 
 📌 环境说明：
 本实践基于 AlmaLinux 8.x , 适用 AlmaLinux 9.x , OS 版本查看：cat /etc/redhat-release
-"></span><header class=post-header><h1 class=post-title itemprop="name headline">SSH 安全连接</h1><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
+
+1.1 更改 SELinux 模式
+
+
+⚠️ 警告：
+禁用 SELinux 会降低您的系统安全性。如果您的场景需要在生产环境中执行调试，请临时使用 permissive 模式，而不是永久禁用 SELinux。如需有关 permissive 模式的更多信息，请参考 
+
+    更改 SELinux 状态和模式
+    
+ 。"></span><header class=post-header><h1 class=post-title itemprop="name headline">SSH 安全连接</h1><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
 </span><span class=post-meta-item-text title=发表于>发表于：
 </span><time title="创建时间：2024-09-10 11:22:30 +0800 +0800" itemprop="dateCreated datePublished" datetime="2024-09-10 11:22:30 +0800 +0800">2024-09-10
 </time></span><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar-check"></i>

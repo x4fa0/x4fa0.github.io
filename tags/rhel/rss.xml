@@ -3,4 +3,13 @@
 &lt;/h2>&lt;blockquote>
 &lt;p>📌 环境说明：&lt;br>
 本实践基于 AlmaLinux 8.x , 适用 AlmaLinux 9.x , OS 版本查看：&lt;code>cat /etc/redhat-release&lt;/code>&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+&lt;/blockquote>
+&lt;h3 id="11-更改-selinux-模式">1.1 更改 SELinux 模式
+&lt;a class="header-anchor" href="#11-%e6%9b%b4%e6%94%b9-selinux-%e6%a8%a1%e5%bc%8f">&lt;/a>
+&lt;/h3>&lt;blockquote>
+&lt;p>⚠️ 警告：
+禁用 SELinux 会降低您的系统安全性。如果您的场景需要在生产环境中执行调试，请临时使用 &lt;code>permissive&lt;/code> 模式，而不是永久禁用 SELinux。如需有关 &lt;strong>permissive&lt;/strong> 模式的更多信息，请参考 
+&lt;a href="%e6%9b%b4%e6%94%b9%20SELinux%20%e7%8a%b6%e6%80%81%e5%92%8c%e6%a8%a1%e5%bc%8f.md" title="更改 SELinux 状态和模式" >
+ 更改 SELinux 状态和模式
+ 
+&lt;/a> 。&lt;/p></description></item></channel></rss>

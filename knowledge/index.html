@@ -120,7 +120,16 @@ II. 插件
 
 📌 环境说明：
 本实践基于 AlmaLinux 8.x , 适用 AlmaLinux 9.x , OS 版本查看：cat /etc/redhat-release
-"></span><header class=post-header><h2 class=post-title itemprop="name headline"><a href=/knowledge/linux/ssh-secure-connection/ itemprop=url class=post-title-link>SSH 安全连接</a></h2><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
+
+1.1 更改 SELinux 模式
+
+
+⚠️ 警告：
+禁用 SELinux 会降低您的系统安全性。如果您的场景需要在生产环境中执行调试，请临时使用 permissive 模式，而不是永久禁用 SELinux。如需有关 permissive 模式的更多信息，请参考 
+
+    更改 SELinux 状态和模式
+    
+ 。"></span><header class=post-header><h2 class=post-title itemprop="name headline"><a href=/knowledge/linux/ssh-secure-connection/ itemprop=url class=post-title-link>SSH 安全连接</a></h2><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
 </span><span class=post-meta-item-text title=发表于>发表于：
 </span><time title="创建时间：2024-09-10 11:22:30 +0800 +0800" itemprop="dateCreated datePublished" datetime="2024-09-10 11:22:30 +0800 +0800">2024-09-10
 </time></span><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar-check"></i>
@@ -132,7 +141,11 @@ II. 插件
 </a></span></span><span class=post-meta-item title=浏览><span class=post-meta-item-icon><i class="fas fa-solid fa-eye"></i>
 </span><span class=post-meta-item-text>浏览：
 </span><span class=waline-pageview-count data-path=/knowledge/linux/ssh-secure-connection/><i class="fa fa-sync fa-spin"></i></span></span></div></div></header><div class=post-body itemprop=articleBody><h2 id=i-环境准备>I. 环境准备
-<a class=header-anchor href=#i-%e7%8e%af%e5%a2%83%e5%87%86%e5%a4%87></a></h2><blockquote><p>📌 环境说明：<br>本实践基于 AlmaLinux 8.x , 适用 AlmaLinux 9.x , OS 版本查看：<code>cat /etc/redhat-release</code></p></blockquote></div><footer class=post-footer><div class=post-button><a class=btn href=/knowledge/linux/ssh-secure-connection/#more rel=contents>阅读全文 &#187;</a></div><div class=post-eof></div></footer></article></div><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=https://mortal.jiefar.com/knowledge/blog/hugo-static-blog-deployment/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs/blog-avatar.png"><meta itemprop=name content="Mortal"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="Mortal"><meta itemprop=description content="一个凡人的生活与梦想"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="Hugo 静态博客部署"><meta itemprop=description content="I. 前提条件
+<a class=header-anchor href=#i-%e7%8e%af%e5%a2%83%e5%87%86%e5%a4%87></a></h2><blockquote><p>📌 环境说明：<br>本实践基于 AlmaLinux 8.x , 适用 AlmaLinux 9.x , OS 版本查看：<code>cat /etc/redhat-release</code></p></blockquote><h3 id=11-更改-selinux-模式>1.1 更改 SELinux 模式
+<a class=header-anchor href=#11-%e6%9b%b4%e6%94%b9-selinux-%e6%a8%a1%e5%bc%8f></a></h3><blockquote><p>⚠️ 警告：
+禁用 SELinux 会降低您的系统安全性。如果您的场景需要在生产环境中执行调试，请临时使用 <code>permissive</code> 模式，而不是永久禁用 SELinux。如需有关 <strong>permissive</strong> 模式的更多信息，请参考
+<a href=%e6%9b%b4%e6%94%b9%20SELinux%20%e7%8a%b6%e6%80%81%e5%92%8c%e6%a8%a1%e5%bc%8f.md title="更改 SELinux 状态和模式">更改 SELinux 状态和模式
+</a>。</p></div><footer class=post-footer><div class=post-button><a class=btn href=/knowledge/linux/ssh-secure-connection/#more rel=contents>阅读全文 &#187;</a></div><div class=post-eof></div></footer></article></div><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=https://mortal.jiefar.com/knowledge/blog/hugo-static-blog-deployment/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs/blog-avatar.png"><meta itemprop=name content="Mortal"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="Mortal"><meta itemprop=description content="一个凡人的生活与梦想"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="Hugo 静态博客部署"><meta itemprop=description content="I. 前提条件
 
 1.1 安装 Hugo
 
