@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>RHEL8 初始化</title><url>/knowledge/linux/rhel8-initialization/</url><categories><category>linux</category></categories><tags><tag>rhel</tag></tags><content type="html"><![CDATA[  I. 连接服务器 1.1 服务器安全连接 SSH 安全连接 1.2 网络配置扩展 1.2.1 NetworkManager 1、在用户层面上，网络配置由 NetworkManager 管理。 该工具作为服务运行，你可以使用以下命令检查它的状态：
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>MinIO 部署</title><url>/knowledge/oss/minio-deployment/</url><categories><category>oss</category></categories><tags><tag>minio</tag></tags><content type="html">  I. Install and Deploy MinIO 1.1 Single-Node Single-Drive 1.1.1 先决条件 1、存储及内存要求
+ℹ️ 参考： 官方文档 。
+2、配置防火墙
+允许流量进入访问 MinIO 服务器和 MinIO 控制台的端口：
+9000 是 MinIO 服务器监听的默认端口。 9001 是访问 MinIO 控制台的推荐端口。 使用以下命令打开所需的防火墙端口（==若使用 Nginx 代理则不需要此项==）：
+sudo firewall-cmd --zone=public --add-port=9000/tcp --permanent sudo firewall-cmd --zone=public --add-port=9001/tcp --permanent 启用 HTTP 和 HTTPS 访问：
+sudo firewall-cmd --zone=public --add-service=http --permanent sudo firewall-cmd --zone=public --add-service=https --permanent 重新加载防火墙以应用更改：
+sudo firewall-cmd --reload 1.1.2 部署单节点单硬盘 MinIO ⚠️ 警告：
+网络文件系统卷破坏了一致性保证：
+MinIO 严格的先读后写和先列后写一致性模型需要本地驱动器文件系统。
+如果底层存储卷是 NFS 或类似的网络连接存储卷，MinIO 无法提供一致性保证。
+1、下载社区版 MinIO Server 使用以下选项之一，为在英特尔或 AMD 64 位处理器上运行 Linux 的机器下载 MinIO 服务器安装文件。
+amd64 (Intel or AMD 64-bit processors)
+RPM(RHEL) wget https://dl.min.io/server/minio/release/linux-amd64/minio-20xxxxxxxxx.0.0-1.x86_64.rpm sudo dnf install minio-20xxxxxxxxx.0.0-1.x86_64.rpm 📢 注意：
+请将 minio-20xxxxxxxxx.0.0-1.x86_64.rpm 替换为实际安装包名。
+2、Create …  </content></entry><entry><title>RHEL8 初始化</title><url>/knowledge/linux/rhel8-initialization/</url><categories><category>linux</category></categories><tags><tag>rhel</tag></tags><content type="html"><![CDATA[  I. 连接服务器 1.1 服务器安全连接 SSH 安全连接 1.2 网络配置扩展 1.2.1 NetworkManager 1、在用户层面上，网络配置由 NetworkManager 管理。 该工具作为服务运行，你可以使用以下命令检查它的状态：
 systemctl status NetworkManager 2、NetworkManager 将从以下位置读取配置： /etc/sysconfig/network-scripts/ifcfg-&amp;lt;IFACE_NAME&amp;gt; ，每个网络接口都有自己的配置文件。 以下是服务器默认的配置示例：
 TYPE=Ethernet PROXY_METHOD=none BROWSER_ONLY=no BOOTPROTO=none #动态为:dhcp 静态为:none或static DEFROUTE=yes IPV4_FAILURE_FATAL=no IPV6INIT=no NAME=enp1s0 UUID=74c5ccee-c1f4-4f45-883f-fc4f765a8477 DEVICE=enp1s0 ONBOOT=yes #启动连接 IPADDR=192.168.1.16 #设置IP地址 PREFIX=24 #设置子网掩码或NETMASK=255.255.255.0 GATEWAY=192.168.1.1 #设置网关 DNS1=114.114.114.114 #设置主DNS DNS2=223.5.5.5 #设置备DNS IPV6_DISABLED=yes 📌 参数说明： 如果你想配置系统使用动态 IP 地址方案，你需要将 BOOTPROTO 参数的值从 none 更改为 dhcp ，并删除 IPADDR 、PREFIX 和 GATEWAY 行。
 BOOTPROTO：值为 none 或 static，表示静态 IP 地址；dhcp 表示动态 IP 地址。 IPADDR：需要分配的 IP 地址 PREFIX：子网掩码使用 CIDR 表示法 GATEWAY：默认网关 ONBOOT：参数设置为 yes 表示此连接将在启动时被激活。 1.2.2 配置静态路由 1、查看连接列表

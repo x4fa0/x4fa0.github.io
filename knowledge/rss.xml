@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Knowledges on 生活与梦想</title><link>https://mortal.jiefar.com/knowledge/</link><description>Recent content in Knowledges on 生活与梦想</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Sat, 14 Sep 2024 15:28:30 +0800</lastBuildDate><atom:link href="https://mortal.jiefar.com/knowledge/rss.xml" rel="self" type="application/rss+xml"/><item><title>RHEL8 初始化</title><link>https://mortal.jiefar.com/knowledge/linux/rhel8-initialization/</link><pubDate>Sat, 14 Sep 2024 15:27:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/linux/rhel8-initialization/</guid><description>&lt;h2 id="i-连接服务器">I. 连接服务器
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Knowledges on 生活与梦想</title><link>https://mortal.jiefar.com/knowledge/</link><description>Recent content in Knowledges on 生活与梦想</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Mon, 16 Sep 2024 14:54:30 +0800</lastBuildDate><atom:link href="https://mortal.jiefar.com/knowledge/rss.xml" rel="self" type="application/rss+xml"/><item><title>MinIO 部署</title><link>https://mortal.jiefar.com/knowledge/oss/minio-deployment/</link><pubDate>Mon, 16 Sep 2024 14:53:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/oss/minio-deployment/</guid><description>&lt;h2 id="i-install-and-deploy-minio">I. Install and Deploy MinIO
+&lt;a class="header-anchor" href="#i-install-and-deploy-minio">&lt;/a>
+&lt;/h2>&lt;h3 id="11-single-node-single-drive">1.1 Single-Node Single-Drive
+&lt;a class="header-anchor" href="#11-single-node-single-drive">&lt;/a>
+&lt;/h3>&lt;h4 id="111-先决条件">1.1.1 先决条件
+&lt;a class="header-anchor" href="#111-%e5%85%88%e5%86%b3%e6%9d%a1%e4%bb%b6">&lt;/a>
+&lt;/h4>&lt;p>1、存储及内存要求&lt;/p>
+&lt;blockquote>
+&lt;p>ℹ️ 参考：
+&lt;a href="https://min.io/docs/minio/linux/operations/installation.html" title="官方文档" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+ 官方文档
+ 
+ &lt;i class="fa fa-external-link-alt">&lt;/i>
+ 
+&lt;/a>。&lt;/p>
+&lt;/blockquote>
+&lt;p>2、配置防火墙&lt;/p>
+&lt;p>允许流量进入访问 MinIO 服务器和 MinIO 控制台的端口：&lt;/p>
+&lt;ul>
+&lt;li>9000 是 MinIO 服务器监听的默认端口。&lt;/li>
+&lt;li>9001 是访问 MinIO 控制台的推荐端口。&lt;/li>
+&lt;/ul>
+&lt;p>使用以下命令打开所需的防火墙端口（==若使用 Nginx 代理则不需要此项==）：&lt;/p></description></item><item><title>RHEL8 初始化</title><link>https://mortal.jiefar.com/knowledge/linux/rhel8-initialization/</link><pubDate>Sat, 14 Sep 2024 15:27:30 +0800</pubDate><guid>https://mortal.jiefar.com/knowledge/linux/rhel8-initialization/</guid><description>&lt;h2 id="i-连接服务器">I. 连接服务器
 &lt;a class="header-anchor" href="#i-%e8%bf%9e%e6%8e%a5%e6%9c%8d%e5%8a%a1%e5%99%a8">&lt;/a>
 &lt;/h2>&lt;h3 id="11-服务器安全连接">1.1 服务器安全连接
 &lt;a class="header-anchor" href="#11-%e6%9c%8d%e5%8a%a1%e5%99%a8%e5%ae%89%e5%85%a8%e8%bf%9e%e6%8e%a5">&lt;/a>
